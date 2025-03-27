@@ -1,0 +1,30 @@
+
+p{
+      color:#000000;
+
+      font-family: Georgia, "Times New Roman";
+      font-size: 22px;
+      font-weight:700;
+}
+
+p.doi {
+      color:#000000;
+
+      font-family: Georgia, "Times New Roman";
+      font-size: 17px;
+      font-weight:700;
+}
+
+td{
+    width:100px;
+    height:30px;
+
+}
+
+th{
+      color:#000000;
+
+      font-family: Georgia, "Times New Roman";
+      font-size: 16px;
+      font-weight:500;
+}

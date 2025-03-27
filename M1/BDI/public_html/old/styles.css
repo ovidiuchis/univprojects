@@ -1,0 +1,21 @@
+/* 
+    Document   : styles
+    Created on : 13-Dec-2010, 16:18:13
+    Author     : Ovidiu Chis
+    Description:
+        Purpose of the stylesheet follows.
+*/
+
+/* 
+   TODO customize this sample style
+   Syntax recommendation http://www.w3.org/TR/REC-CSS2/
+*/
+
+root { 
+    display: block;
+}
+th, td {
+    border-width: 2;
+
+}
+

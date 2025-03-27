@@ -1,0 +1,30 @@
+Ovidiu Chis
+gr. 253
+
+CABD- Lab. 1, Lab.2
+Obiecte spatio-temporale
+	1. Punct
+		- este definit de coordonate (X,Y,Z) si un timestamp
+			- double x
+			- double y
+			- double z
+			- TIMESTAMP
+		- are de asemenea asociat un ID
+			- folosit in  mod special la asocierea mai multor pozitii in timp pt. acelasi punct (unic ID)
+		
+	2. Linie	
+		- este definit prin intermediul a doua puncte si un timestamp
+		
+	3. Operatii
+		- punct E pe dreapta (BOOL)
+		- lungime dreapta (NUM)
+		- timestamp punct (DATE)
+		- comparare linii (NUM)
+		- obiect creat inainte de o data (before)  (BOOL)
+		- evolutia in timp a unui punct (DATE)
+		
+Reprezentare
+
+	1.  Vizualizare punctelor definite
+	2.	Vizualizarea dreptelor definite
+	3. 	Vizualizare evolutiei pozitiei unui punct in timp (scattered point chart)

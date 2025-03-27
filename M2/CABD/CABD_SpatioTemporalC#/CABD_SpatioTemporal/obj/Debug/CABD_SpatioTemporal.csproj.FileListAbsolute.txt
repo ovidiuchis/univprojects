@@ -1,0 +1,8 @@
+E:\Dropbox\Scoala\Master\An 2\CABD- deiush\CABD_SpatioTemporal\CABD_SpatioTemporal\bin\Debug\CABD_SpatioTemporal.exe
+E:\Dropbox\Scoala\Master\An 2\CABD- deiush\CABD_SpatioTemporal\CABD_SpatioTemporal\bin\Debug\CABD_SpatioTemporal.pdb
+E:\Dropbox\Scoala\Master\An 2\CABD- deiush\CABD_SpatioTemporal\CABD_SpatioTemporal\obj\Debug\CABD_SpatioTemporal.csprojResolveAssemblyReference.cache
+E:\Dropbox\Scoala\Master\An 2\CABD- deiush\CABD_SpatioTemporal\CABD_SpatioTemporal\obj\Debug\CABD_SpatioTemporal.MainVisualWindow.resources
+E:\Dropbox\Scoala\Master\An 2\CABD- deiush\CABD_SpatioTemporal\CABD_SpatioTemporal\obj\Debug\CABD_SpatioTemporal.Properties.Resources.resources
+E:\Dropbox\Scoala\Master\An 2\CABD- deiush\CABD_SpatioTemporal\CABD_SpatioTemporal\obj\Debug\CABD_SpatioTemporal.csproj.GenerateResource.Cache
+E:\Dropbox\Scoala\Master\An 2\CABD- deiush\CABD_SpatioTemporal\CABD_SpatioTemporal\obj\Debug\CABD_SpatioTemporal.exe
+E:\Dropbox\Scoala\Master\An 2\CABD- deiush\CABD_SpatioTemporal\CABD_SpatioTemporal\obj\Debug\CABD_SpatioTemporal.pdb

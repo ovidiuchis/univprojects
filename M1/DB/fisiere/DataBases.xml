@@ -1,0 +1,24 @@
+<Databases>
+
+<!-- there can be users with permisions or replication or
+          views or other database objects  -->
+
+
+
+<DataBase dataBaseName="Scoala">
+<Tables>
+<Table fileName="Elevi.kv" rowLength="2" tableName="Elevi">
+<Structure>
+<Attribute attributeName="id" isNull="1" length="0" type="int"/>
+<Attribute attributeName="Nume" isNull="1" length="0" type="varchar"/>
+</Structure>
+<primaryKey/>
+<IndexFiles>
+<IndexFile indexName="Elevi.index" indexType="BTree" isUnique="0" keyLength="20">
+<IndexAttributes/>
+</IndexFile>
+</IndexFiles>
+</Table>
+</Tables>
+</DataBase>
+</Databases>

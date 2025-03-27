@@ -1,0 +1,70 @@
+ <html>
+<head></head>
+
+<body>
+ <h3>2. Obiectul History</h3>
+
+        <p class="text-context">
+
+          Navigatoarele web au o caracteristica numita "History" care permite urmarirea locatiilor pe care le-ati vizitat. Acest obiect contine un tablou (Array) cu paginile vizitate de client, in cadrul unei ferestre, un istoric al paginilor vizitate. <br />
+
+<b>Obiectul History</b> permite navigarea inapoi in lista istoric la paginile care au mai fost vizitate in cadrul aceleasi ferestre.<br /><br />
+
+- Proprietatile obiectului "history" sunt urmatoarele"
+
+		</p>
+
+          <ul class="ptul">
+
+            <li><b>current</b> - face referire la adresa URL curenta din lista istoric </li>
+
+            <li><b>length</b> - intoarce numarul de intrari din lista istoric </li>
+
+            <li><b>next</b> - face referire la urmatoarea adresa URL din lista istoric </li>
+
+            <li><b>previous</b> - face referire la adresa URL anterioara din lista istoric</li>
+
+          </ul><br />
+
+- Metodele obiectului "history" sunt urmatoarele"
+
+          <ul class="ptul">
+
+            <li><b>back()</b> - incarca ultima adresa URL din lista istoric </li>
+
+            <li><b>forward()</b> - incarca urmatoarea adresa URL din lista istoric </li>
+
+            <li><b>go(x)</b> - incarca o adresa URL, echivalenta cu un salt la numarul "x" (pozitiv sau negativ) din lista istoric</li>
+
+          </ul><br />
+
+
+
+Daca dorim intoarcerea inapoi cu 3 pagini in lista istoric, putem folosi o functie si obiectul "History" ca in exemplul urmator:
+
+
+
+            <blockquote>
+
+              &lt;script type=&quot;text/javascript&quot;&gt;<br />
+
+              &lt;!-- <br />
+
+              function inapoi3 { <br />
+
+              &nbsp; &nbsp; window.history,go(-3); <br />
+
+              } <br />
+
+              //--&gt; <br />
+
+              &lt;/script&gt;
+
+            </blockquote>
+
+           - Unde "inapoi3" este numele functiei si (-3) reprezinta numarul de pagini la care se face saltul, pornind de la pagina curenta, negativ face saltul inapoi iar daca numarul dintre paranteze este pozitiv face saltul inainte in lista istoric.
+
+
+		    <h2> <a href="exempluHist.html" > Exemplu  </a> </h2>
+</body>
+</html>

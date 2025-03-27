@@ -1,0 +1,24 @@
+SMAP
+detaliiProdus_jsp.java
+JSP
+*S JSP
+*F
++ 0 detaliiProdus.jsp
+detaliiProdus.jsp
++ 1 header.jsp
+header.jsp
++ 2 nav.jsp
+nav.jsp
++ 3 footer.jsp
+footer.jsp
+*L
+1,15:55
+1#1,18:70
+15#0,10:88
+25,6:99
+30,12:105
+1#2,8:117
+41#0,9:125
+1#3,5:134
+49#0,8:138
+*E
