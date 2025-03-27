@@ -1,6 +1,15 @@
 # Arhivă personală de proiecte de licente si masterat
 
-Această arhivă conține materiale, proiecte și resurse acumulate în timpul anilor de masterat, organizate pe ani de studiu și materii. Fiecare director conține cod sursă, documentație sau alte fișiere relevante.
+Această arhivă reunește proiecte, cod și materiale adunate pe parcursul studiilor la [Universitatea Babeș-Bolyai, Cluj-Napoca](https://www.cs.ubbcluj.ro/)
+
+❤️ **LOVE UBB** ❤️
+
+Am urmat:
+
+- Programul de **Licență în Informatică**: [Computer Science – Undergraduate Programme](https://www.cs.ubbcluj.ro/education/academic-programmes/undergraduate-programmes/computer-science-programme-profile/)
+- Programul de **Masterat în Baze de Date**: [Databases – Master's Programme](https://www.cs.ubbcluj.ro/education/academic-programmes/masters-programmes/databases-programme-profile/)
+
+Arhiva este organizată pe ani și materii, conținând atât proiecte practice, cât și documentații și aplicații dezvoltate individual sau în echipă.
 
 ## Licenta
 
