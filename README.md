@@ -11,6 +11,8 @@ Am urmat:
 
 Arhiva este organizată pe ani și materii, conținând atât proiecte practice, cât și documentații și aplicații dezvoltate individual sau în echipă.
 
+Lista de mai jos este completă în proporție de 85% - au exista materii și studii care nu au produs cod sau nu l-am păstrat (de ex: Statistica). Pentru lista completă a materiilor, se navighează spre site-ul UBB.
+
 ## Licenta
 
 ### Anul 1
