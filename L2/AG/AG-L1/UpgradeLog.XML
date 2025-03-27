@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet type='text/xsl' href='_UpgradeReport_Files/UpgradeReport.xslt'?><UpgradeLog>
+<Properties><Property Name="Solution" Value="AG-L1">
+</Property><Property Name="Solution File" Value="C:\Users\Ovidiu Chis\Documents\Visual Studio 2008\Projects\AG-L1\AG-L1.sln">
+</Property><Property Name="User Options File" Value="C:\Users\Ovidiu Chis\Documents\Visual Studio 2008\Projects\AG-L1\AG-L1.suo">
+</Property><Property Name="Date" Value="16 octombrie 2010">
+</Property><Property Name="Time" Value="22:23">
+</Property></Properties><Event ErrorLevel="0" Project="" Source="AG-L1.sln" Description="File successfully backed up as C:\Users\Ovidiu Chis\Documents\Visual Studio 2008\Projects\AG-L1\Backup\AG-L1.sln">
+</Event><Event ErrorLevel="0" Project="" Source="AG-L1.suo" Description="File successfully backed up as C:\Users\Ovidiu Chis\Documents\Visual Studio 2008\Projects\AG-L1\Backup\AG-L1.suo">
+</Event><Event ErrorLevel="0" Project="AG-L1" Source="AG-L1\AG-L1.csproj" Description="Project file successfully backed up as C:\Users\Ovidiu Chis\Documents\Visual Studio 2008\Projects\AG-L1\Backup\AG-L1\AG-L1.csproj">
+</Event><Event ErrorLevel="0" Project="AG-L1" Source="AG-L1\AG-L1.csproj.user" Description="Project user file successfully backed up as C:\Users\Ovidiu Chis\Documents\Visual Studio 2008\Projects\AG-L1\Backup\AG-L1\AG-L1.csproj.user">
+</Event><Event ErrorLevel="0" Project="AG-L1" Source="AG-L1\addArcForm.cs" Description="File successfully backed up as C:\Users\Ovidiu Chis\Documents\Visual Studio 2008\Projects\AG-L1\Backup\AG-L1\addArcForm.cs">
+</Event><Event ErrorLevel="0" Project="AG-L1" Source="AG-L1\addArcForm.Designer.cs" Description="File successfully backed up as C:\Users\Ovidiu Chis\Documents\Visual Studio 2008\Projects\AG-L1\Backup\AG-L1\addArcForm.Designer.cs">
+</Event><Event ErrorLevel="0" Project="AG-L1" Source="AG-L1\ListEntries.cs" Description="File successfully backed up as C:\Users\Ovidiu Chis\Documents\Visual Studio 2008\Projects\AG-L1\Backup\AG-L1\ListEntries.cs">
+</Event><Event ErrorLevel="0" Project="AG-L1" Source="AG-L1\Form1.cs" Description="File successfully backed up as C:\Users\Ovidiu Chis\Documents\Visual Studio 2008\Projects\AG-L1\Backup\AG-L1\Form1.cs">
+</Event><Event ErrorLevel="0" Project="AG-L1" Source="AG-L1\Form1.Designer.cs" Description="File successfully backed up as C:\Users\Ovidiu Chis\Documents\Visual Studio 2008\Projects\AG-L1\Backup\AG-L1\Form1.Designer.cs">
+</Event><Event ErrorLevel="0" Project="AG-L1" Source="AG-L1\GraphRepresentationConverver.cs" Description="File successfully backed up as C:\Users\Ovidiu Chis\Documents\Visual Studio 2008\Projects\AG-L1\Backup\AG-L1\GraphRepresentationConverver.cs">
+</Event><Event ErrorLevel="0" Project="AG-L1" Source="AG-L1\Program.cs" Description="File successfully backed up as C:\Users\Ovidiu Chis\Documents\Visual Studio 2008\Projects\AG-L1\Backup\AG-L1\Program.cs">
+</Event><Event ErrorLevel="0" Project="AG-L1" Source="AG-L1\Properties\AssemblyInfo.cs" Description="File successfully backed up as C:\Users\Ovidiu Chis\Documents\Visual Studio 2008\Projects\AG-L1\Backup\AG-L1\Properties\AssemblyInfo.cs">
+</Event><Event ErrorLevel="0" Project="AG-L1" Source="AG-L1\Properties\Resources.Designer.cs" Description="File successfully backed up as C:\Users\Ovidiu Chis\Documents\Visual Studio 2008\Projects\AG-L1\Backup\AG-L1\Properties\Resources.Designer.cs">
+</Event><Event ErrorLevel="0" Project="AG-L1" Source="AG-L1\Properties\Settings.Designer.cs" Description="File successfully backed up as C:\Users\Ovidiu Chis\Documents\Visual Studio 2008\Projects\AG-L1\Backup\AG-L1\Properties\Settings.Designer.cs">
+</Event><Event ErrorLevel="0" Project="AG-L1" Source="AG-L1\Properties\Settings.settings" Description="File successfully backed up as C:\Users\Ovidiu Chis\Documents\Visual Studio 2008\Projects\AG-L1\Backup\AG-L1\Properties\Settings.settings">
+</Event><Event ErrorLevel="0" Project="AG-L1" Source="AG-L1\addArcForm.resx" Description="File successfully backed up as C:\Users\Ovidiu Chis\Documents\Visual Studio 2008\Projects\AG-L1\Backup\AG-L1\addArcForm.resx">
+</Event><Event ErrorLevel="0" Project="AG-L1" Source="AG-L1\Form1.resx" Description="File successfully backed up as C:\Users\Ovidiu Chis\Documents\Visual Studio 2008\Projects\AG-L1\Backup\AG-L1\Form1.resx">
+</Event><Event ErrorLevel="0" Project="AG-L1" Source="AG-L1\Properties\Resources.resx" Description="File successfully backed up as C:\Users\Ovidiu Chis\Documents\Visual Studio 2008\Projects\AG-L1\Backup\AG-L1\Properties\Resources.resx">
+</Event><Event ErrorLevel="0" Project="AG-L1" Source="AG-L1\AG-L1.csproj" Description="Project converted successfully">
+</Event><Event ErrorLevel="3" Project="AG-L1" Source="AG-L1\AG-L1.csproj" Description="Converted">
+</Event><Event ErrorLevel="0" Project="" Source="AG-L1.sln" Description="Solution converted successfully">
+</Event><Event ErrorLevel="3" Project="" Source="AG-L1.sln" Description="Converted">
+</Event><Event ErrorLevel="0" Project="AG-L1" Source="AG-L1\AG-L1.csproj" Description="Scan complete: Upgrade not required for project files.">
+</Event></UpgradeLog>

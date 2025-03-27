@@ -1,0 +1,21 @@
+/*Sa se scrie un predicat care intoarce reuniunea
+a doua multimi.*/
+
+domains
+         elem=integer
+         list=elem*
+predicates
+           member(elem,list)
+           reun(list,list,list)
+clauses
+        member(E,[E|_]).
+        member(E,[_|L]):-
+          member(E,L).
+        reun([],L,L).
+		
+        reun([A|L1],L2,[A|L3]):-
+         not(member(A,L2)),
+         !,
+         reun(L1,L2,L3).
+       reun([_|L1],L2,L3):-
+          reun(L1,L2,L3).

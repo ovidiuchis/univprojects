@@ -1,0 +1,17 @@
+domains 
+   el=integer
+   list=el*
+predicates
+    inserare(el,list,list)
+    sortare(list,list,list)
+    sort(list,list)
+clauses
+    inserare(H,[],[H]):-!.
+    inserare(H,[H1|T],L3):-H>H1,!,inserare(H,T,L4),
+                         L3=[H1|L4],!.
+    inserare(H,L,[H|L]).                            
+    sortare([],L,L):-!.
+    sortare([H|T],COL,L2):-inserare(H,COL,COL1),
+                       sortare(T,COL1,L2),!.
+    sortare([H|_],COL,L1):-inserare(H,COL,L1).
+    sort(L1,L2):-sortare(L1,[],L2).                   

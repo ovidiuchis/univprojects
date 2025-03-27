@@ -1,0 +1,22 @@
+/*P1.11b*/
+
+domains
+	elem=integer
+	list=elem*
+predicates
+	elimina(elem,list,list)
+	elimina_aux(elem,elem,list,list)
+clauses
+	elimina(_,[],[]).
+	elimina(E,L1,L2):-
+		elimina_aux(E,1,L1,L2).
+	elimina_aux(E,N,[H|L1],L1):-
+		H=E,
+		!,
+		N1=N+1,
+		N<4,
+		elimina_aux(E,N1,L1,L1).
+	elimina_aux(E,N,[H|L1],[H|L2]):-
+		H<>E,
+		!,
+		elimina_aux(E,N,L1,L2).

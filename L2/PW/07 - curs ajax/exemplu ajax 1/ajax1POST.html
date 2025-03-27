@@ -1,0 +1,27 @@
+<html>
+  <head>
+    <title>Un prim exemplu cu AJAX</title>
+    
+    <style type="text/css">
+
+    table {
+      font-family: Arial;
+      font-size: 12px;
+    }
+
+    </style>
+
+    <script type="text/javascript" src="AJAXCalls.js">
+    </script>
+
+  </head>
+
+  <body>
+    <form>
+    <table>
+      <tr><td>Va rugam sa tastati ceva aici:</td><td><input type="text" id="text" onKeyUp="doRequest(this.id, this.value, 'majuscule', 'POST')"/></td></tr>
+      <tr><td>Ce ati tastat convertit la majuscule:</td><td><input type="text" id="majuscule" disabled="disabled"/></td></tr>
+    </table>
+    </form>
+  </body>
+</html>

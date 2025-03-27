@@ -1,0 +1,27 @@
+#!/bin/sh
+#Sa se scrie un program Shell de supraveghere care sa actioneze astfel:la fiecare noua conectare in sistem, sa se afiseze o 
+#lista a tuturor utilizatorilor 
+#activi din sistem si in dreptul fiecarui utilizator sa se afiseze numarul proceselor active lansate de catre acesta.
+
+who > file2
+while (true)
+do
+	who > file3
+	                        
+	cat file3 | while read linie 
+			do 
+				if !(`grep -sq "$linie" file2`)
+				then
+				 	echo "Nou utilizator"
+				 	cat file3 | awk '{print $1}' | sort | uniq -c
+				 	 
+				 	
+				fi
+			done
+			
+	cat file3 > file2
+	sleep 5
+done
+
+
+

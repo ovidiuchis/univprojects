@@ -1,0 +1,9 @@
+domains
+   el=integer
+   lista=el
+   listad=lista*
+predicates
+   aranj(lista,integer,listad)
+clauses
+   aranj([A],1,[[A]]).
+   aranj([_|L],N,T):-aranj(L,N,T).      

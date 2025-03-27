@@ -1,0 +1,17 @@
+domains
+  mul=integer*
+predicates
+  egale(mul,mul)
+  membru(integer,mul)
+  inclusa(mul,mul)
+clauses
+  membru(E,[E|_]).
+  membru(E,[_|T]):-
+    membru(E,T).
+  egale(M1,M2):-
+    inclusa(M1,M2),
+    inclusa(M2,M1).
+  inclusa([],_).
+  inclusa([X|M1],M2):-
+     membru(X,M2),
+     inclusa(M1,M2).

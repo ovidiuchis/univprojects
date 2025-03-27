@@ -1,0 +1,36 @@
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<title>CGI care trimite un mail</title></head><body>
+
+<form method="post" action="cgi-bin/mail.cgi">
+  <table border="0">
+    <tr>
+       <td>Expeditor:</td><td>
+       
+       <script language="JavaScript">
+       document.write('<input type="text" readonly="readonly" name="exp" value="');
+       var s = window.location.href;
+       var i = s.indexOf('~', 0);
+       var j = s.indexOf('/', i);
+       var user = s.substring(i+1,j);
+       var dst = user.concat('@scs.ubbcluj.ro');
+       document.write(dst);
+       document.write('" size="30"/>');
+       </script>
+       <input readonly="readonly" name="exp" value="bufny@scs.ubbcluj.ro" size="30" type="text">
+       
+       
+       </td>
+       </tr>
+    
+    <tr><td>Destinatar:&nbsp;</td><td><input name="dst" size="30" maxlength="10" type="text"></td></tr>
+    <tr><td colspan="2">
+      <textarea cols="32" rows="10" name="Continut mail"></textarea>
+    </td></tr>
+    <tr><td colspan="2" height="10"></td></tr>
+    <tr><td colspan="2"><input value="Trimite" type="submit"></td></tr>
+  </table>
+
+</form>
+
+</body></html>

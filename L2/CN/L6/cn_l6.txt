@@ -1,0 +1,94 @@
+%-- 3/30/11  5:54 PM --%
+To get started, select "MATLAB Help" from the Help menu.
+x=-0.99:0.01:0.99
+y=x^4+3*x.^2+x+5
+y=x.^4+3*x.^2+x+5
+plot(x,y)
+y=y+normrnd(0,0.1,1,lenght*x)
+y=y+normrnd(0,0.1,1,length*x)
+y=y+normrnd(0,0.1,1,lenght(x)
+y=y+normrnd(0,0.1,1,lenght(x))
+y=y+normrnd(0,0.1,1,length(x))
+plot(x,y)
+y=y+normrnd(0,0.2,1,length(x))
+plot(x,y)
+aproxDiscret(x,y,4)
+aproxDiscret(x,y,100)
+aproxDiscret(x,y,1000)
+aproxDiscret(x,y,1)
+aproxDiscret(x,y,4)
+y1=aproxDiscret(x,y,1)
+plot(x,y,'b',x,y1,'r');
+y1=aproxDiscret(x,y,1)
+plot(x,y,'b',x,y1,'r');
+y1=aproxDiscret(x,y,1);
+plot(x,y,'b',x,y1,'r');
+y1=aproxDiscret(x,y,1);
+plot(x,y,'b',x,y1,'r');
+y1=aproxCont(x,y,1);
+plot(x,y,'b',x,y1,'r');
+y2=aproxdiscret(x,y,1);
+plot(x,y,'b',x,y2,'r');
+plot(x,y,'b',x,y1,'r');
+y1=aproxCont(x,y,4);
+plot(x,y,'b',x,y1,'r');
+y1=aproxCont(x,y,4);
+plot(x,y,'b',x,y1,'r');
+y1=aproxCont(x,y,4);
+plot(x,y,'b',x,y1,'r');
+y1=aproxCont(x,y,4);
+%-- 4/06/11  5:56 PM --%
+x=-0.999:0.001:0.999]
+x=-0.999:0.001:0.999;
+y0=2*x.^3-5*x.^2-x+7
+plot(x,y0)
+y=y0+normrnd(0,0.2,1,length(yo));
+y=y0+normrnd(0,0.2,1,length(y0));
+plot(x,y)
+y1=aproxCont(x,y,3);
+plot(x,y,'b',x,y1,'r')
+y=y0+normrnd(0,0.2,1,length(yo));
+y=y0+normrnd(0,0.2,1,length(y0));
+y1=aproxCont(x,y,3);
+plot(x,y,'b',x,y1,'r')
+x=[-0.999999:0.000001:-0.999,-0.998:-0.001:0.998,0.998:0.000001:0.999999];
+y1=aproxCont(x,y,3);
+x=[-0.999999:0.000001:-0.999,-0.998:-0.001:0.998,0.998:0.000001:0.999999];
+y1=aproxCont(x,y,3);
+y=y0+normrnd(0,0.2,1,length(y0));
+y1=aproxCont(x,y,3);
+y0=2*x.^3-5*x.^2-x+7
+y=y0+normrnd(0,0.2,1,length(y0));
+y1=aproxCont(x,y,3);
+plot(x,y,'b',x,y1,'r')
+t=1900:10:2000;
+y=[75.995,91.971, 105.711, 123.203, 131.669, 150.697,, 179.323,, 203.212, 226.505, 249.633,281.422];
+y=[75.995,91.971, 105.711, 123.203, 131.669, 150.697,, 179.323,, 203.212, 226.505, 249.633,281.422]
+y=[75.995,91.971, 105.711, 123.203, 131.669, 150.697, 179.323, 203.212, 226.505, 249.633,281.422]
+ti=1900:1:2010;
+y1=lagr(t,y,t1);
+y1=lagr(t,y,ti);
+plot(t,y,'o',ti,yi,'-');
+plot(t,y,'o',ti,y1,'-');
+fprintf('In 2010: %g\n',y1(lentgh(y1));
+fprintf('In 2010: %g\n',y1(lentgh(y1)));
+fprintf('In 2010: %g\n',y1(length(y1)));
+plot(t,y,'o',ti,y1,'-');
+help polifit
+help polifeat
+help polyfit
+c=polyfit(t,y,length(t)-1);
+polyval(c,ti);
+yi1=polyval(c,ti);
+plot(t,y,'o',ti,yi1,'-');
+fprintf('In 2010: %g\n',yi1(length(yi1)));
+t=0:0.1:1;
+ti=0:0.01:1.1;
+plot(t*100+1900,y,'o',ti*100+1900,yi1,'-');
+fprintf('In 2010: %g\n',yi1(length(yi1)));
+y1=lagr(t,y,ti);
+plot(t*100+1900,y,'o',ti*100+1900,yi1,'-');
+c=polyfit(t,y,length(t)-1);
+yi1=polyval(c,ti);
+plot(t*100+1900,y,'o',ti*100+1900,yi1,'-');
+fprintf('In 2010: %g\n',yi1(length(yi1)));

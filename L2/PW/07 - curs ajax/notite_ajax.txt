@@ -1,0 +1,48 @@
+
+WAMP
+- Pachet software pentru Windows ce include: Apache, PHP, MySQL
+
+Notite AJAX
+
+(asynchronous JavaScript and XML)
+Tehnologie aparuta in 2005.
+
+Permite crearea de aplicatii Web interactive (pagini dinamice) asemanatoare aplicatiilor desktop.
+
+
+Pe ce se bazeaza AJAX:
+
+- Limbajele standard de prezentare: XHTML si pe CSS
+- Se bazeaza pe DOM (Document Object Model) pentru afisari dinamice si reactii la actiunile utilizatorului
+- Schimbul de date si manipularea acestora folosind XML
+- JavaScript care pune împreuna cele de mai sus.
+- Transportul asincron de date folosind XMLHttpRequest;
+
+Diferenta dintre sincron si asincron.
+
+
+Sa punctam, pe scurt, etapele atât în modelul classic (sincron) cât si modelul Ajax (asincron):
+
+Astfel, în modelul clasic (sincron):
+- Clientul face o cerere HTTP pentru o resursa Web catre un server Web (prin pagina XHTML, JSP, ASP, PHP etc.), de regula prin apasarea unui buton (submit).
+- Serverul Web preia cererea, o prelucreaza si pregateste rarpunsul.
+- Serverul trimite înapoi raspunsul, într-unul din formatele cunoscute (XHTML etc.).
+
+
+In modelul Ajax, se utilizeaza interactiunea la nivel de componenta a paginii:
+- O componenta face un apel JavaScript catre un motor Ajax (Ajax engine).
+- Motorul Ajax face (automat) o cerere Http pentru o resursa de pe server.
+- Serverul prelucreaza cererea si pregateste raspunsul.
+- Raspunsul este trimis motorului Ajax într-un format adecvat schimbului de date, de regula fie XML, fie text.
+- Motorul Ajax actualizeaza componenta care a initiat procesul
+
+Dezavantajul major al modului de lucru classic este faptul ca toate componentele unei pagini trebuie actualizate, indifferent daca au fost modificate sau nu. Asta presupune transport mare de resurse si timp de asteptare mai mare, de fiecare data pâna la încarcarea completa a paginii raspuns.
+
+Ajax interpune motorul Ajax ca si intermediar, ceea ce elimina transportul inutil de resurse. Prin aceasta creste viteza de schimb, interactiunea este mai comoda etc. De fapt, o aplicatie Ajax se comporta la fel ca si o aplicatie desktop clasica, practic faptul ca este o aplicatie Web este transparent. Pretul platit este, însa, faptul ca este necesar un browser performant pe o statie nu chiar banala, care sa suporte JavaScript etc. Din fericire, Internet Explorer, Mozilla si Firefox, ca si Opera sunt aliniate la acest model.
+
+Un prim exemplu
+- exemplul cu GET
+- exemplul cu POST
+
+- Descrierea obiectului XMLHttpRequest si a modalitatilor sale de creare
+

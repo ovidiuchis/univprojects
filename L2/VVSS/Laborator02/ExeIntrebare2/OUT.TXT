@@ -1,0 +1,4 @@
+cod=0
+na=2
+ana d2 manager 1000
+ion d1 f2 1100

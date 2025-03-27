@@ -1,0 +1,18 @@
+
+
+Avem un numar de orase si un numar de masini.
+Fiecare oras are un nume si o lista de locuri de parcare. 
+Fiecare masina are un tip, posesor,nr de inmatriculare(...).
+O masina poate sa faca rezervare pt un loc de parcare pt o anumita perioada de timp.
+
+1. Sa se insereze 100 de orase si 1000 de locuri de parcare, fiecare oras avand 10 locuri de parcare.
+
+2. Se da un id de masina si un id de loc de parcare.Sa se verifice daca masina cu id-ul respectiv are rezervare la locul de parcare cu id-ul respectiv.
+Daca da, atunci sa i se prelungeasca perioada  de parcare cu 10 minute,altfel sa i se  faca o rezervare incepand din acest moment.
+
+3. Se da un tip de masina sa prelungeasca toate rezervarile masinilor de acel tip cu 30 de minute.
+
+4. Sa  se modifice punctul 3 astfel incat: la sfarsit sa  se afiseze numarul de masini pt care s-a a avut loc prelungirea perioadei,
+folosind  transactii si nivelul minim de izolare care sa garanteze ca numarul afisat (a masinilor pt care am facut prelungirea) e corect.
+
+5. Sa se construiasca o interogare care sa afiseze 1 sau 0 (nu mai stiu exact), dar care sa  foloseasca un 'covering index'.

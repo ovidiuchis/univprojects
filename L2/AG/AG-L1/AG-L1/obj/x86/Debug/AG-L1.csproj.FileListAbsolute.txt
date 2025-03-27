@@ -1,0 +1,14 @@
+C:\Users\Ovidiu Chis\Documents\Visual Studio 2008\Projects\AG-L1\AG-L1\bin\x86\Debug\AG-L1.exe
+C:\Users\Ovidiu Chis\Documents\Visual Studio 2008\Projects\AG-L1\AG-L1\bin\x86\Debug\AG-L1.pdb
+C:\Users\Ovidiu Chis\Documents\Visual Studio 2008\Projects\AG-L1\AG-L1\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Users\Ovidiu Chis\Documents\Visual Studio 2008\Projects\AG-L1\AG-L1\obj\x86\Debug\AG_L1.Properties.Resources.resources
+C:\Users\Ovidiu Chis\Documents\Visual Studio 2008\Projects\AG-L1\AG-L1\obj\x86\Debug\AG-L1.exe
+C:\Users\Ovidiu Chis\Documents\Visual Studio 2008\Projects\AG-L1\AG-L1\obj\x86\Debug\AG-L1.pdb
+C:\Users\Ovidiu Chis\Documents\Visual Studio 2008\Projects\AG-L1\AG-L1\obj\x86\Debug\AG_L1.Form1.resources
+C:\Users\Ovidiu Chis\Documents\Visual Studio 2008\Projects\AG-L1\AG-L1\obj\x86\Debug\AG_L1.addArcForm.resources
+C:\Users\Ovidiu Chis\Documents\Visual Studio 2008\Projects\AG-L1\AG-L1\obj\x86\Debug\ResGen.read.1.tlog
+C:\Users\Ovidiu Chis\Documents\Visual Studio 2008\Projects\AG-L1\AG-L1\obj\x86\Debug\ResGen.write.1.tlog
+C:\Users\Ovidiu Chis\Desktop\_school\AG\AG-L1\AG-L1\obj\x86\Debug\AG-L1.exe
+C:\Users\Ovidiu Chis\Desktop\_school\AG\AG-L1\AG-L1\obj\x86\Debug\AG-L1.pdb
+F:\Scoala\An 3\Sem I\AG\AG-L1\AG-L1\obj\x86\Debug\AG-L1.exe
+F:\Scoala\An 3\Sem I\AG\AG-L1\AG-L1\obj\x86\Debug\AG-L1.pdb

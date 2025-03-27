@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!ELEMENT catalog (categorie*)>
+<!ATTLIST catalog data CDATA "data_cat">
+<!ELEMENT categorie (denumireC, produs*)>
+<!ATTLIST categorie codc CDATA "id"
+                    valabilDela CDATA "valdela"
+                    valabilPanala CDATA "valpanla"
+                    premium CDATA "da/nu">
+<!ELEMENT denumireC (#PCDATA)>
+<!ELEMENT produs (denumireP, pret, descriere, stoc, caracteristici)>
+<!ATTLIST produs idP CDATA  "idp"
+                 valabilDela CDATA "valdela"   
+                 valabilPanala CDATA "valpanla"
+                 garantie CDATA "garantie">
+<!ELEMENT denumireP (#PCDATA)>
+<!ELEMENT pret (#PCDATA)>
+<!ELEMENT descriere (#PCDATA)>
+<!ELEMENT stoc (#PCDATA)>
+<!ELEMENT caracteristici ANY>

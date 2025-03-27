@@ -1,0 +1,65 @@
+create table clienti 
+(
+idc integer primary key,nume text,telefon text
+)
+
+create table produse
+(
+id_produs integer primary key,
+nume text, 
+descriere text, 
+id_cat integer,
+constraint fk_idcat foreign key (id_cat)  references categorii(idcat)
+)
+
+create table categorii
+(
+idcat integer primary key, descriere text
+)
+
+create table furnizori
+(
+id_f integer primary key,nume text,adresa text
+)
+
+create table comezi
+(
+id_comanda integer primary key,
+data_livrare text, 
+idc integer,
+ida integer, 
+constraint fk_idc foreign key (idc) references clienti(idc),
+constraint fk_ida foreign key (ida) references angajati(ida)
+)
+create table date_comenzi
+(
+ id_comanda integer,
+ id_produs integer,
+ cantitate text,
+ constraint pk_dcomenzi primary key (id_comanda,id_produs),
+ foreign key (id_comanda) references comenzi(id_comanda) ,
+ foreign key (id_produs ) references produse(id_produs)
+)
+
+create table furnizor_produs
+(
+ id_prod integer,
+ id_furn integer,
+ pret integer,
+ constraint pk_furnprod primary key (id_prod,id_furn),
+ foreign key (id_prod) references produse(id_produs),
+ foreign key (id_furn) references furnizori(id_f)
+)
+
+insert into angajati (ida, nume , adresa) values (1,"Pop Vlad","ICBRatianu nr 2")
+insert into furnizor_produs (id_prod,id_furn,pret)  values (2,1,150)
+insert into comenzi (id_comanda, data_livrare,idc,ida) values (1,"14nov2009",1,1)
+insert into date_comenzi (id_comanda,id_produs,cantitate) values (1,2,4)
+
+delete from clienti where idc between 3 and 5
+delete from date_comenzi where id_comanda=1
+
+update angajati set adresa ="valea ierii" where nume="Ion Pop"
+alter table date_comenzi drop column cantitate
+alter table date_comenzi add column cantitate integer
+update date_comenzi set cantitate=1 where cantitate>1

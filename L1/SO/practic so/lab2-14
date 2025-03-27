@@ -1,0 +1,34 @@
+#14. Se va srie un script shell care compara continutul a doua fisiere text
+#si va tipari primele 5 linii diferite.
+
+#fisierele vor fi date ca parametri
+
+if [ $# -le 1 ]
+then
+ echo "Nu sunt destui parametri!"
+else
+ k=1
+ c1=1
+ for i in `cat $1`
+ do
+  if [ "$k" -ge "6" ]
+  then 
+   exit
+  else 
+   c2=1
+   for j in `cat $2`
+   do
+    if [ "$i" != "$j" ]
+    then
+     if [ $c1 == $c2 ]
+     then
+      echo "linia $c1 este diferita: $i --- $j"
+      k=`expr $k + 1`
+     fi
+    fi
+    c2=`expr $c2 + 1`
+   done
+   c1=`expr $c1 + 1`
+  fi
+ done
+fi

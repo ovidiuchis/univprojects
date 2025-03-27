@@ -1,0 +1,11 @@
+domains
+ elem=integer
+ lista=elem*
+predicates
+ adauga(integer,elem,lista,lista) 
+clauses
+ adauga(_,X,[],[X]).
+ adauga(Poz,X,L,[X|L]):-Poz<2.
+ adauga(Poz,X,[H|T],[H|C]):-Poz>1,
+        NouPoz=Poz-1,
+        adauga(NouPoz,X,T,C).

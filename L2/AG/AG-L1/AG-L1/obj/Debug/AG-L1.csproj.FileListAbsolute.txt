@@ -1,0 +1,7 @@
+C:\Users\Ovidiu Chis\Documents\Visual Studio 2008\Projects\AG-L1\AG-L1\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\Ovidiu Chis\Documents\Visual Studio 2008\Projects\AG-L1\AG-L1\obj\Debug\AG_L1.Properties.Resources.resources
+C:\Users\Ovidiu Chis\Documents\Visual Studio 2008\Projects\AG-L1\AG-L1\obj\Debug\AG-L1.csproj.GenerateResource.Cache
+C:\Users\Ovidiu Chis\Documents\Visual Studio 2008\Projects\AG-L1\AG-L1\bin\Debug\AG-L1.exe
+C:\Users\Ovidiu Chis\Documents\Visual Studio 2008\Projects\AG-L1\AG-L1\bin\Debug\AG-L1.pdb
+C:\Users\Ovidiu Chis\Documents\Visual Studio 2008\Projects\AG-L1\AG-L1\obj\Debug\AG-L1.exe
+C:\Users\Ovidiu Chis\Documents\Visual Studio 2008\Projects\AG-L1\AG-L1\obj\Debug\AG-L1.pdb

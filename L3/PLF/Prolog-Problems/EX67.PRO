@@ -1,0 +1,31 @@
+%P3.4.
+
+domains
+	arbore=arb(integer,arbore,arbore);nil
+predicates
+	create(integer,arbore)
+	insertLeft(arbore,arbore,arbore)
+	insertRight(arbore,arbore,arbore)
+	preordine(arbore)
+	subst(arbore,integer,integer,arbore)
+clauses
+	create(E,arb(E,nil,nil)).
+	insertLeft(A,arb(E,_,D),arb(E,A,D)).
+	insertRight(A,arb(E,S,_),arb(E,S,A)).
+	preordine(nil).
+	preordine(arb(R,S,D)):-
+		write(R),
+		preordine(S),
+		preordine(D).
+	subst(nil,_,_,nil).
+	subst(arb(R,S,D),E,X,arb(R1,S1,D1)):-
+		R=E,
+		R1=E,
+		subst(S,E,X,S1),
+		subst(D,E,X,D1),
+		!.
+	subst(arb(R,S,D),E,X,arb(R,S1,D1)):-
+		R<>E,
+		subst(S,E,X,S1),
+		subst(D,E,X,D1),
+		!.

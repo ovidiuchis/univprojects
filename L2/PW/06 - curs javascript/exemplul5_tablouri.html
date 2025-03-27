@@ -1,0 +1,43 @@
+<html>
+
+<head><title>Lucru cu tablouri in JavaScript</title>
+
+<script language="JavaScript">
+
+	Echipe = new Array();
+	Echipe[0] = 'Steaua';
+	Echipe[1] = 'CFR';
+	Echipe[2] = 'Dinamo';
+	Echipe[5] = 'Rapid';
+
+	Jucatori = new Array(11);
+
+	Fructe = new Array("Mere", "Pere");
+
+	// tablou moultidimensional
+	M = new Array(1, new Array(4, 6, 8));
+</script>
+
+</head>
+
+<body>
+<script language="JavaScript">
+	document.write(Jucatori.length);
+	document.write("<br>");
+	document.write(Echipe.length);
+	document.write("<br>");
+	document.write(Fructe[1] + '<br>');
+</script>
+	Clasementul este:<br>
+<script>
+	var i;
+	for (i=0;i<Echipe.length;i++)
+		document.write(i + ". " + Echipe[i] + '<br>');
+	Echipe.splice(3, 2);
+	for (i=0;i<Echipe.length;i++)
+		document.write(i + ". " + Echipe[i] + '<br>');
+	document.write(M[1][2]);
+</script>
+</body>
+
+</html>

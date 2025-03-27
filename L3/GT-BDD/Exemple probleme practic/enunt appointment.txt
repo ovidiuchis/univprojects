@@ -1,0 +1,16 @@
+You must create a database (3 points) for an electronic agenda. The database must handle appointments for multiple users. Each user has a name, a password and a list of 
+appointments. Each appointment has a date, a duration, a location (text) and a subject.
+A user can share an appointment with other users from the database. An appointment can be shared with a user only once (no duplicates should be allowed).
+
+Create the following:
+
+	1. A script that will add 100 users and 1000 appointments. Each user must have 10 appointments. (2 points)
+	2. Create a procedure that receives as a parameter an appointment and a user. The procedure will share the appointment with the user if the 	
+           sharing does not already exist. (1 point)
+	3. Denormalize by adding a column "NoOfShared" to the users table. The column should always contain the number of appointments shared 	
+           with that user.
+		a). Modify procedure from 2 in order to compute the "NoOfShared" column. (1 point)
+		b). Add transactions to ensure the database does not enter an inconsistent state. See the smallest isolation level that 			
+                       guarantees that "NoOfShared" is always consistent. (1 point)
+	4. Create a sql statement that returns the number of appointments for 
+	a given user. Make sure the query uses an index seek. (1 point) 

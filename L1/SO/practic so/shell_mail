@@ -1,0 +1,13 @@
+#!/bin/sh
+cd /home/scs/an3
+for i in `ls gr231; ls gr232; ls gr233; ls gr931; ls gr932`
+do
+echo $i
+mail -s "Cursul de istoria informaticii" $i <<XXXXXX
+Urmatorul curs de Istoria Informaticii va avea
+loc joi, 19.03.2009 ora 8.00 sala C335,
+atat linia romana cat si linia engleza.
+Prof. F. Boian
+XXXXXX
+done
+cd $HOME

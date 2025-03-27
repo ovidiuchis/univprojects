@@ -1,0 +1,5 @@
+variabile predefinite
+redirectarea (commit la headere)
+functiile sesiuni, mentinerea sesiunii
+conectarea la baza de date
+trimiterea unui email din php

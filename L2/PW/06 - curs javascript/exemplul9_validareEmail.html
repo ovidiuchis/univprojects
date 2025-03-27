@@ -1,0 +1,58 @@
+<html>
+<head>
+<title>Exemplu Validare adresa email</title>
+    <script language="Javascript">
+
+        function verifica(email) {
+            var adresa;
+            var i, j;
+            adresa = email.value;
+            
+            i = adresa.indexOf('@')
+            j = adresa.indexOf('.', i)
+            
+            var l = adresa.length
+
+
+            if (i == -1 || i == 0 || i == l) {
+                alert("Adresa de email invalida")
+                return false
+            }
+
+            if (j == -1 || j == 0 || j == l) {
+                alert("Adresa de email invalida")
+                return false
+            }
+
+            return true
+        }
+
+        function ValidateForm() {
+            var email = document.formular.email
+            if ((email.value == null) || (email.value == "")) {
+                alert("Va rugam introduceti o adresa de emai valida")
+                return false
+            }
+            if (!verifica(email)) {
+                email.value = ""
+                email.focus();
+                return false
+            }
+            return true
+        }
+    </script>
+
+</head>
+<body>
+
+<form name="formular" method="POST" action="#" onSubmit="return ValidateForm()">
+    <p>Enter an Email Address :
+        <input type="text" name="email">
+    </p>
+
+    <p>
+        <input type="submit" name="Submit" value="Submit">
+    </p>
+</form>
+</body>
+</html>

@@ -1,0 +1,11 @@
+domains
+ list=integer*
+predicates
+ insereaza(integer,list,list)
+ sort(list,list)
+clauses
+ insereaza(A,[],[A]):-!.
+ insereaza(A,[H|T],[H|L]):-H<=A,!,insereaza(A,T,L).
+ insereaza(A,[H|T],[A|[H|T]]):-!.
+ sort([],[]):-!.
+ sort([H|T],L):-sort(T,L1),insereaza(H,L1,L).

@@ -1,0 +1,63 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="sas.xsl"?>
+<catalog data="04/11/2010 00:00:00">
+  <categorie codc="3" valabilDela="10/05/2010" valabilPanala="11/05/2010" premium="nu">
+    <denumireC>NON-Food</denumireC>
+    <produs idP="6" valabilDela="10/10/2010" valabilPanala="12/10/2010" garantie="12">
+      <denumireP>Canapea</denumireP>
+      <pret>800</pret>
+      <descriere>3 locuri</descriere>
+      <stoc>4</stoc>
+      <caracteristici>
+        <material>mohair</material>
+      </caracteristici>
+    </produs>
+  </categorie>
+  <categorie codc="2" valabilDela="09/05/2010" valabilPanala="11/05/2010" premium="nu">
+    <denumireC>IT</denumireC>
+    <produs idP="4" valabilDela="10/10/2010" valabilPanala="12/10/2010" garantie="24">
+      <denumireP>Monitor</denumireP>
+      <pret>500</pret>
+      <descriere>negru, 17</descriere>
+      <stoc>1</stoc>
+      <caracteristici />
+    </produs>
+    <produs idP="5" valabilDela="10/10/2010" valabilPanala="12/10/2010" garantie="24">
+      <denumireP>Tastatura</denumireP>
+      <pret>20</pret>
+      <descriere>5 butoane</descriere>
+      <stoc>225</stoc>
+      <caracteristici>
+        <Miros>placut</Miros>
+      </caracteristici>
+    </produs>
+  </categorie>
+  <categorie codc="1" valabilDela="10/01/2010" valabilPanala="12/01/2011" premium="da">
+    <denumireC>Food</denumireC>
+    <produs idP="1" valabilDela="10/10/2010" valabilPanala="12/10/2010" garantie="5">
+      <denumireP>Pita</denumireP>
+      <pret>5</pret>
+      <descriere>neagra</descriere>
+      <stoc>5</stoc>
+      <caracteristici>
+        <Greutate>1,2kg</Greutate>
+      </caracteristici>
+    </produs>
+    <produs idP="2" valabilDela="10/10/2010" valabilPanala="12/10/2010" garantie="0">
+      <denumireP>Sare</denumireP>
+      <pret>1</pret>
+      <descriere>de mare</descriere>
+      <stoc>2</stoc>
+      <caracteristici />
+    </produs>
+    <produs idP="3" valabilDela="10/10/2010" valabilPanala="12/10/2010" garantie="0">
+      <denumireP>Salam</denumireP>
+      <pret>15</pret>
+      <descriere>de cal</descriere>
+      <stoc>50</stoc>
+      <caracteristici>
+        <Compozitie>rasa pura</Compozitie>
+      </caracteristici>
+    </produs>
+  </categorie>
+</catalog>

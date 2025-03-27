@@ -1,0 +1,16 @@
+domains
+  mul=integer*
+predicates
+  diferenta(mul,mul,mul)
+  membru(integer,mul)
+clauses
+  membru(E,[E|_]).
+  membru(E,[_|T]):-
+    membru(E,T).
+  diferenta([],_,[]).
+  diferenta([X|M1],M,[X|M2]):-
+    diferenta(M1,M,M2),
+    not(membru(X,M)).
+  diferenta([X|M1],M,M2):-
+    diferenta(M1,M,M2),
+    membru(X,M).

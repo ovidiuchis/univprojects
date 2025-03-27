@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<!--Created with Liquid XML Studio Developer Edition (Trial) 8.1.6.2625 (http://www.liquid-technologies.com)-->
+<xs:schema elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:element name="comanda" type="comandaType" />
+    <xs:complexType name="comandaType">
+        <xs:sequence>
+            <xs:element name="produs" type="produsType" minOccurs="0" maxOccurs="unbounded" />
+        </xs:sequence>
+        <xs:attribute name="numeClient" type="xs:string" default="numeClient" />
+    </xs:complexType>
+    <xs:element name="produs" type="produsType" />
+    <xs:complexType name="produsType">
+        <xs:sequence>
+            <xs:element name="idp" type="idpType" />
+            <xs:element name="cantitate" type="cantitateType" />
+        </xs:sequence>
+    </xs:complexType>
+    <xs:element name="idp" type="idpType" />
+    <xs:complexType name="idpType">
+        <xs:simpleContent>
+            <xs:extension base="xs:string" />
+        </xs:simpleContent>
+    </xs:complexType>
+    <xs:element name="cantitate" type="cantitateType" />
+    <xs:complexType name="cantitateType">
+        <xs:simpleContent>
+            <xs:extension base="xs:string" />
+        </xs:simpleContent>
+    </xs:complexType>
+</xs:schema>

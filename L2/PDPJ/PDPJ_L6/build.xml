@@ -1,0 +1,27 @@
+<project default="compile" basedir=".">
+   <property file="build.properties"/>
+   <property name="src.dir" value="src"/>
+   <property name="lib.dir" value="lib"/>
+   
+  <path id="classpath">
+     <fileset dir="${lib.dir}" includes="**/*.jar"/>
+  </path>
+
+  <target name="compile">
+     <delete dir="pdpj" quiet="true"/>
+     <mkdir dir="pdpj"/>
+     <mkdir dir="pdpj/WEB-INF/classes/app"/>
+	 <mkdir dir="pdpj/WEB-INF/lib"/>
+
+     <javac srcdir="${src.dir}/app" destdir="pdpj/WEB-INF/classes" debug="on" deprecation="on" optimize="off" includes="**/*.java">
+        <classpath refid="classpath"/>
+     </javac>
+
+	 <copy file="${src.dir}/operator.jsp" todir="pdpj" failonerror="false"/>
+	 <copy file="${src.dir}/client.jsp" todir="pdpj" failonerror="false"/>
+	 <copy file="${src.dir}/web.xml" todir="pdpj/WEB-INF" failonerror="false"/>
+	 <copy file="${lib.dir}/mysql-connector-java-5.0.8-bin.jar" todir="pdpj/WEB-INF/lib" failonerror="false"/>
+	 <war warfile="pdpj.war" basedir="pdpj"/>
+	 <copy file="pdpj.war" todir="C:\apache-tomcat-6.0.29\webapps"/>
+  </target>
+</project>

@@ -1,0 +1,14 @@
+domains
+  list=integer*
+predicates
+  insert(integer,integer,list,list)
+clauses
+  insert(X,0,[],L):-
+    insert(X,N,[],L),
+    N>1.
+  insert(X,N,H,[X|H]):-
+    N=1.
+  insert(X,N,[Y|H],[Y|L]):-
+    insert(X,M,H,L),
+    M>0,
+    N=M+1.

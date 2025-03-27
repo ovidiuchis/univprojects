@@ -1,0 +1,9 @@
+F:\Scoala\An 2\Sem II\GT-BDD\Laboratoare\Laborato4\Lab4\Lab4\bin\x86\Debug\Lab4.exe
+F:\Scoala\An 2\Sem II\GT-BDD\Laboratoare\Laborato4\Lab4\Lab4\bin\x86\Debug\Lab4.pdb
+F:\Scoala\An 2\Sem II\GT-BDD\Laboratoare\Laborato4\Lab4\Lab4\obj\x86\Debug\ResolveAssemblyReference.cache
+F:\Scoala\An 2\Sem II\GT-BDD\Laboratoare\Laborato4\Lab4\Lab4\obj\x86\Debug\Lab4.RezervariForm.resources
+F:\Scoala\An 2\Sem II\GT-BDD\Laboratoare\Laborato4\Lab4\Lab4\obj\x86\Debug\Lab4.Properties.Resources.resources
+F:\Scoala\An 2\Sem II\GT-BDD\Laboratoare\Laborato4\Lab4\Lab4\obj\x86\Debug\Lab4.Start.resources
+F:\Scoala\An 2\Sem II\GT-BDD\Laboratoare\Laborato4\Lab4\Lab4\obj\x86\Debug\Lab4.csproj.GenerateResource.Cache
+F:\Scoala\An 2\Sem II\GT-BDD\Laboratoare\Laborato4\Lab4\Lab4\obj\x86\Debug\Lab4.exe
+F:\Scoala\An 2\Sem II\GT-BDD\Laboratoare\Laborato4\Lab4\Lab4\obj\x86\Debug\Lab4.pdb

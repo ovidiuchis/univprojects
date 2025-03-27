@@ -1,0 +1,32 @@
+/*P2.11).Pozitiile elementului maxim, dintr-o lista
+*/
+
+domains
+	elem=integer
+	list=elem*
+	listd=list*
+predicates
+	maxim(list,elem)
+	pozmax(elem,list,elem)
+	run(list,list)
+clauses
+	maxim([],-32000).
+	maxim([H|T],M):-
+		maxim(T,M),
+		M>H,
+		!.
+	maxim([H|_],H).
+	pozmax(E,[E|_],1).
+	pozmax(E,[H|T],M):-
+		E<>H,
+		!,
+		pozmax(E,T,M1),
+		M=M1+1.
+	pozmax(E,[H|T],M):-
+		E=H,
+		!,
+		pozmax(E,T,M1),
+		M=M1+1.
+	run(L,P):-
+		maxim(L,Max),
+		findall(Poz,pozmax(Max,L,Poz),P).

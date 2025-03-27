@@ -1,0 +1,74 @@
+﻿create procedure populate_tables
+
+	as
+		insert into Clienti values (1,'Ovidiu Chis','ovidiu@chis.ro')
+		insert into Clienti values (2,'Muntea Razvan','mont@yahoo.com')
+		insert into Clienti values (3,'Ciubancan Paul','ciuby8@yahoo.com')
+		
+		insert into Produse values (1,'Monitor','bucata')
+		insert into Produse values (2,'Tastatura','bucata')
+		insert into Produse values (3,'Mouse','bucata')
+		insert into Produse values (4,'Mere','Kg')
+		insert into Produse values (5,'Visine','Kg')
+		insert into Produse values (6,'Laptop','bucata')
+		insert into Produse values (7,'Scaun','bucata')
+		insert into Produse values (8,'Masa','bucata')
+		insert into Produse values (9,'DetergentLichid','litru')
+
+		insert into SistemeCE values (1,'Ebay','www.ebay.com')
+		insert into SistemeCE values (2,'TigerDirect','www.tigerdirect.com')
+		insert into SistemeCE values (3,'Oncos','lipsa')
+		insert into SistemeCE values (4,'Ikea','www.ikea.com')
+
+		insert into Catalog values (1,1,'03/28/2010',1000)
+		insert into Catalog values (1,2,'03/19/2010',900)
+		insert into Catalog values (2,1,'03/19/2010',50)
+		insert into Catalog values (2,2,'03/23/2010',65)
+		insert into Catalog values (3,1,'03/19/2010',150)
+		insert into Catalog values (6,2,'03/23/2010',2050)
+		insert into Catalog values (6,1,'03/19/2010',2500)
+		insert into Catalog values (5,3,'03/19/2010',4)
+		insert into Catalog values (9,4,'03/21/2010',2)
+		insert into Catalog values (7,4,'03/22/2010',90)
+		insert into Catalog values (8,4,'03/21/2010',90)
+		insert into Catalog values (9,4,'03/21/2010',40)
+		insert into Catalog values (2,2,'03/22/2010',60)
+	
+		
+		
+
+
+
+reate procedure [dbo].[create_tables]
+
+	as
+		if not exists (select name from sys.tables where name='Clienti')					
+			create table Clienti (codc int Primary Key,nume nchar(50),email nchar(50))
+			
+		if not exists (select name from sys.tables where name='SistemeCE')
+
+			create table SistemeCE ( cods int PRIMARY KEY, denumire nchar(50), url nchar(50))
+		if not exists (select name from sys.tables where name='Produse')
+			
+			create table Produse (codp int PRIMARY KEY, denumire nchar(50), um varchar(10))
+		if not exists (select name from sys.tables where name='Tranzactii')
+	
+			create table Tranzactii (cods int references SistemeCE(cods),codc int references Clienti(codc),data datetime,codp int references Produse(codp),cantitate int)
+		if not exists (select name from sys.tables where name='Catalog ')
+
+			create table Catalog (codp int references Produse(codp), cods int references SistemeCE(cods)  , data datetime, pret smallint, primary key(codp,cods,data,pret))
+
+
+
+create procedure add_transaction
+	@cods int,
+	@codc int,
+	@data datetime,
+	@codp int,
+	@cantitate int
+		as
+			insert into Tranzactii values (@cods,@codc,@data,@codp,@cantitate)
+			select pret * @cantitate from Catalog where codp=@codp and cods=@cods 
+			
+
+

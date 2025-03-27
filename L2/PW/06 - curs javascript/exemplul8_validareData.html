@@ -1,0 +1,87 @@
+<html>
+<head>
+<title>Exemplu de validare a datei</title>
+
+    <script language="JavaScript">
+        var delimitator = "/";
+        var zileInLuna = new Array(31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31);
+
+        function isInteger(s) {
+            var i;
+            for (i = 0; i < s.length; i++) {
+                // Verifica daca caracterul curent este cifra
+                var c = s.charAt(i);
+                if (((c < '0') || (c > '9'))) return false;
+            }
+            return true;
+        }
+
+
+        function zileInFebruarie(an) {
+            if (an % 4 == 0) zileInLuna[1] = 29;
+        }
+
+
+        function isDate(data) {
+
+            // sau putem folosi functia split - data.split(delimitator);
+            var pos1 = data.indexOf(delimitator)
+            var pos2 = data.indexOf(delimitator, pos1 + 1)
+
+            if (pos1 == -1 || pos2 == -1) {
+                alert("Formatul in care trebuie introdusa data este: zz/ll/aaaa")
+                return false
+            }
+
+            var zi = data.substring(0, pos1)
+            var luna = data.substring(pos1 + 1, pos2)
+            var an = data.substring(pos2 + 1)
+
+            zi = eval(zi)
+            luna = eval(luna)
+            an = eval(an)
+
+            zileInFebruarie(an)
+
+            if (zi < 1 || zi > zileInLuna[luna]) {
+                alert("Va rugam sa introduceti o zi valida")
+                return false
+            }
+
+            if (luna < 1 || luna > 12) {
+                alert("Va rugam sa introduceti o luna valida")
+                return false
+            }
+
+
+            if (an < 1900 || an > 2100) {
+                alert("Va rugam sa introduceti un an valid din 4 cifre" + an)
+                return false
+            }
+
+            return true
+        }
+
+
+        function ValidateForm() {
+            if (!isDate(document.formular.data.value)) {
+                return false
+            }
+            return true
+        }
+
+    </script>
+</head>
+
+<body>
+<form name="formular" method="post" action="#" onSubmit="return ValidateForm()">
+    <p>Introduceti o data <font color="red"><b>(zz/ll/aaaa)</b></font>:
+        <input type="text" name="data" maxlength="10" size="15">
+    </p>
+
+    <p>
+        <input type="submit" value="Valideaza">
+    </p>
+</form>
+</body>
+</html>

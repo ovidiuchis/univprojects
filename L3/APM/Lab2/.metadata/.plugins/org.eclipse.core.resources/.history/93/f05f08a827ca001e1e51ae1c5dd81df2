@@ -1,0 +1,71 @@
+
+import java.io.*;
+
+public class Main {
+	public static void main(String argv[]) throws IOException {
+		DoubleLinkedList L = new DoubleLinkedList();
+		FileInputStream fis = new FileInputStream(
+				"Z:\\in.txt");
+		BufferedReader r = new BufferedReader(new InputStreamReader(fis));
+		while (r.ready()) {
+			L.add(new Persoana(r.readLine(), r.readLine()));
+		}
+		r.close();
+		DLListIterator itr = L.iterator();
+
+		System.out.println("Datele initiale din lista (inainte de S) \n");
+		try {
+			while (itr.hasNext()) {
+				System.out.println(itr.next());
+
+			}
+		} catch (IndexOutOfBoundsException e) {
+			System.out.println(e);
+		}
+
+		/*
+		 * scriere normala in fisier FileWriter fis2 = new FileWriter(
+		 * "Z:\\out.txt", true); BufferedWriter w =
+		 * new BufferedWriter(fis2); itr.reset();
+		 * System.out.println("si in fisier \n"); try { while (itr.hasNext()) {
+		 * w.write(((Persoana)itr.next()).toString()+"\n");
+		 * 
+		 * 
+		 * } } catch (IndexOutOfBoundsException e) { System.out.println(e); }
+		 * w.close();
+		 */
+		FileOutputStream fos = new FileOutputStream(
+				"Z:\\out.txt");
+		ObjectOutputStream oos = new ObjectOutputStream(fos);
+		itr.reset();
+		while (itr.hasNext()) {
+			oos.writeObject(itr.next());
+		}
+		oos.close();
+
+		Persoana pp = new Persoana("1890402050369", "Dudas Cristina");
+		L.add(pp);
+		FileInputStream fis2 = new FileInputStream(
+				"Z:\\out.txt");
+		ObjectInputStream ois = new ObjectInputStream(fis2);
+		Object o;
+		try {
+			for (int i = 0; i < 3; i++) {
+				o = (Persoana) ois.readObject();
+				L.add(o);
+			}
+		} catch (ClassNotFoundException e) {
+			System.out.println(e);
+		}
+		ois.close();
+		System.out.println("\n Datele din lista (dupa S) \n");
+		try {
+			while (itr.hasNext()) {
+				System.out.println(itr.next());
+
+			}
+		} catch (IndexOutOfBoundsException e) {
+			System.out.println(e);
+		}
+	}
+}

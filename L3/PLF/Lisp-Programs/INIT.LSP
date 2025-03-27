@@ -1,0 +1,159 @@
+;;; (C) Copyright 1984 by Gold Hill Computers
+
+;;; This file initilizes GCLISP
+
+(SETF *DEFAULT-PATHNAME-DEFAULTS* (MERGE-PATHNAMES (CD) "FOO.LSP"))
+
+(LOAD "CONFIG" :VERBOSE NIL)
+
+(DEFUN GET-2-BYTE (STRM)
+  (+& (FUNCALL STRM :READ-CHAR)
+      (LSH (FUNCALL STRM :READ-CHAR) 8)))
+
+(DEFUN FASLOAD1 (FILE &AUX BYTE)
+  (LET ((STRM (OPEN (SETQ FILE (MERGE-PATHNAMES FILE ".FAS"))
+			      :ELEMENT-TYPE 'UNSIGNED-BYTE))
+	(*PACKAGE* *PACKAGE*)
+        (FOP-STACK NIL)
+	(FOP-TABLE (MAKE-ARRAY 50 :FILL-POINTER 0))
+	(FOP-STRING (MAKE-ARRAY 50 :FILL-POINTER 0 
+		     		   :ELEMENT-TYPE 'STRING-CHAR))
+	BYTE FUNC SIZE I S)
+    (UNWIND-PROTECT
+      (PROGN
+        (DO () ((= 255 (FUNCALL STRM :READ-CHAR))))
+        (CATCH 'FASLGROUP
+          (DO () (())
+            (UNLESS (SETQ BYTE (FUNCALL STRM :READ-CHAR))
+              (ERROR "Unexpected EOF while loading FASL file."))
+	    (CASE BYTE
+	      (4.
+	       (PUSH NIL FOP-STACK))
+	      (7.
+	       (SETQ SIZE (FUNCALL STRM :READ-CHAR))
+               (SETF (FILL-POINTER FOP-STRING) SIZE)
+               (SEND STRM :FILL-ARRAY FOP-STRING)
+               (PUSH (INTERN FOP-STRING) FOP-STACK))
+	      (11.
+	       (SETQ I (FUNCALL STRM :READ-CHAR)
+		     SIZE (FUNCALL STRM :READ-CHAR))
+               (SETF (FILL-POINTER FOP-STRING) SIZE)
+               (SEND STRM :FILL-ARRAY FOP-STRING)
+               (PUSH (INTERN FOP-STRING (AREF FOP-TABLE I)) FOP-STACK))
+	      (13.
+	       (SETQ I (AREF FOP-TABLE (PROG1
+                                         (+& (FUNCALL STRM :READ-CHAR)
+                                          (LSH (FUNCALL STRM :READ-CHAR) 8))
+                                         (FUNCALL STRM :READ-CHAR)
+                                         (FUNCALL STRM :READ-CHAR))))
+               (UNLESS (TYPEP I 'PACKAGE)
+                 (ERROR "FOP 13: ~S is not a package" I))
+               (SETQ *PACKAGE* I))
+	      (14.
+	       (SETQ S (POP FOP-STACK)
+		     I (FIND-PACKAGE S))
+               (UNLESS (TYPEP I 'PACKAGE)
+                 (ERROR "~S is not the name of an existing package" S))
+               (VECTOR-PUSH I FOP-TABLE))
+	      (38.
+	       (SETQ SIZE (FUNCALL STRM :READ-CHAR))
+               (SETQ I (MAKE-ARRAY SIZE :ELEMENT-TYPE 'STRING-CHAR))
+               (SEND STRM :FILL-ARRAY I)
+               (PUSH I FOP-STACK))
+	      (51.
+	       (LET ((FEFOFF (GET-2-BYTE STRM)) 
+		     (CNT (GET-2-BYTE STRM))
+		     (FEF (CAR FOP-STACK))
+		     SEG OFF X VAL)
+		 (SETF (VALUES OFF SEG)(%POINTER FEF))
+		 (SETQ FEFOFF (-& OFF FEFOFF))
+		 (DOTIMES (I CNT)
+		   (SETF (VALUES NIL VAL)
+			 (%CONTENTS SEG (+& OFF (SETQ X (GET-2-BYTE STRM)))))
+		   (%CONTENTS-STORE SEG (+& OFF X) (+& VAL FEFOFF) T))
+		 ))
+	      (52.
+	       (LET ((NV (POP FOP-STACK))
+		     (OBJ (POP FOP-STACK))
+		     (IDX (FUNCALL STRM :READ-CHAR)))
+		 (FSET OBJ NV)))
+	      (57.
+	       (FUNCALL STRM :READ-CHAR))
+	      (59.
+	       (LET ((ITEMS (FUNCALL STRM :READ-CHAR))
+		     (SIZE (GET-2-BYTE STRM))
+		     FEF SEG OFF C-OFF SEG1 OFF1)
+		 (SETQ FEF (MAKE-ARRAY (-& SIZE 11)
+			    :ELEMENT-TYPE '(UNSIGNED-BYTE 8)))
+		 (MULTIPLE-VALUE-SETQ (OFF SEG) (%POINTER FEF))
+		 (%CONTENTS-STORE SEG (+& OFF 4) 0 NIL)
+		 (%CONTENTS-STORE SEG OFF 20. NIL)
+		 (SEND STRM :FILL-ARRAY FEF)
+		 (SETQ C-OFF (+& OFF 11))
+		 (LET ((STACK FOP-STACK))
+		   (DOTIMES (I ITEMS)
+		     (MULTIPLE-VALUE-SETQ (OFF1 SEG1)
+		       (%POINTER (POP FOP-STACK)))
+		     (%CONTENTS-STORE SEG (+& C-OFF (* I 4)) OFF1 SEG1))
+		   (%CONTENTS-STORE SEG (+& OFF 4) ITEMS NIL))
+		 (%CONTENTS-STORE SEG (+& OFF 5)
+		  (+& OFF (+& 11 (* ITEMS 4))) T)
+		 (%CONTENTS-STORE SEG (+& OFF 7) SEG T)
+		 (PUSH FEF FOP-STACK)))
+	      (64.
+	       (THROW 'FASLGROUP 'OK))
+	      (OTHERWISE (ERROR "Unimplemented FOP instruction: ~S" BYTE)))))
+	FILE)
+      (CLOSE STRM))))
+
+(DEFUN WITH-DISKETTE (DISKETTE FILE-FUNCTION PATHNAME
+		      &REST FILE-FUNCTION-ARGS)
+   (WHEN DISKETTE
+     (SETF PATHNAME (IF (= *NUMBER-OF-DRIVES* 1)
+			(MAKE-PATHNAME :DEFAULTS PATHNAME :DEVICE "")
+			(MERGE-PATHNAMES PATHNAME "A:")))
+     (DO ((STATUS (FILE-NOT-ACCESSIBLE-P PATHNAME)
+	          (FILE-NOT-ACCESSIBLE-P PATHNAME)))
+	 ((NULL STATUS))
+       (FORMAT *QUERY-IO* "~%~?" STATUS '())
+       (DISKETTE-PROMPT DISKETTE
+			(IF (AND (PATHNAME-DEVICE PATHNAME)
+				 (NOT (EQUAL (PATHNAME-DEVICE PATHNAME) "")))
+			    (PATHNAME-DEVICE PATHNAME)
+                            "A:"))))
+   (APPLY FILE-FUNCTION PATHNAME FILE-FUNCTION-ARGS))
+
+(DEFUN FILE-NOT-ACCESSIBLE-P (PATHNAME)
+  (MULTIPLE-VALUE-BIND (RESULT STATUS)
+                       (IGNORE-ERRORS (PROBE-FILE PATHNAME))
+    (IF STATUS
+	(IF (EQUAL (SUBSEQ STATUS 0 10) "DOS Error:")
+	    STATUS
+	    (ERROR STATUS))
+	(IF RESULT
+	    NIL
+	    (FORMAT NIL "File ~A not found." (NAMESTRING PATHNAME))))))
+
+
+(DEFUN DISKETTE-PROMPT (DISKETTE DRIVE)
+   (FORMAT *QUERY-IO*
+           "~&Please insert the ~A diskette in drive ~A.~%~
+            Strike any key when ready"
+	   DISKETTE
+	   DRIVE)
+   (FUNCALL *QUERY-IO* :CLEAR-INPUT)
+   (READ-CHAR *QUERY-IO*))
+
+(LET (*LOAD-VERBOSE*)
+ (WITH-DISKETTE *LISP-LIBRARY-DISKETTE*
+ 	        (FUNCTION FASLOAD1)
+	        (MERGE-PATHNAMES "FLD.FAS"
+			 	 *LISP-LIBRARY-PATHNAME*))
+
+ (MAPC 'FMAKUNBOUND '(GET-2-BYTE FASLOAD1))
+
+ (WITH-DISKETTE *LISP-LIBRARY-DISKETTE*
+		(FUNCTION FASLOAD)
+		(MERGE-PATHNAMES "INIT1.FAS" *LISP-LIBRARY-PATHNAME*))
+ )
+

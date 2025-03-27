@@ -1,0 +1,85 @@
+Curs 1 - Programare Web
+
+Bibliografie: www.w3schools.com
+
+Cerinte curs si laborator.
+
+Setarea contului personal pentru realizarea paginilor web
+
+Linux: mkdir $HOME/public_html
+       chmod o+x $HOME
+       chmod o+rx public_html
+
+Paginile din directorul de mai sus vor fi servite browserelor de catre
+un server Web Apache care ruleaza pe www.scs.ubbcluj.ro. Astfel, aceste pagini pot sa
+fie accesate cu un URL de forma:
+
+       http://www.scs.ubbcluj.ro/~username
+
+Windows: mkdir win_html
+       chmod o+x $HOME
+       chmod o+rx $win_html
+
+Paginile din directorul de mai sus vor fi servite browserelor de catre un server Web IIS
+care ruleaza pe win.scs.ubbcluj.ro. Astfel, aceste pagini pot sa fie accesate cu un URL de forma:
+	    
+       http://win.scs.ubbcluj.ro/~username
+
+Serverul web win.scs.ubbcluj.ro are adresa IP privata (172.30.0.14). Acesta poate fi accesat doar
+din reteaua interna din Campus. Daca se doreste accesarea paginilor deservite de acest server din
+exterior se va folosi un URL de forma:
+
+       http://193.0.225.20:443/~username
+
+193.0.225.20 este adresa IP a routerului care tine in spate reteaua din Campus. Toate pachetele care
+vin din Internet spre el, pe portul 443 sunt redirectate automat spre win.scs.ubbcluj.ro pe portul 80
+(a se recunoaste mecanismul de DNAT studiat la retele).
+
+Arhitectura de comunicare WEB
+
+
+Browser -> HTTP -> Server Web -> Sistem de fisiere
+
+Browser -> HTTP -> Server Web -> Server Aplicatii -> Baza de date
+                              -> Sistem de fisiere
+
+
+Pagini Web - Statice
+           - Dinamice
+
+Tehnologii WEB:
+	- Server-side (majoritatea pentru a genera pagini dinamice): PHP, JSP, ASP (Servlet, CGI);
+	- Client-side (Java-Script, VBScript, Flash, Applet-uri Java).
+
+
+URL - Definitie
+
+HTTP - caracterul stateless vs statefull
+
+HTML
+- definitie,
+- caracteristici
+
+Notiunea de tag - cu corp, fara corp
+
+Sintaxa generala a unui tag
+atribut
+valori
+
+Taguri importante
+
+- html
+- head
+- title
+- body, bgcolor
+- font, size, color
+- img, src, height, width
+- br
+- b
+- i
+- h1, h2, h3
+- center
+- table
+- tr, td, th, colspan
+- p
+- hr

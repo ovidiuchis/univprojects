@@ -1,0 +1,86 @@
+<?xml version="1.0"?>
+<project name="setupDB" basedir="." default="all">
+
+	<property file="build.properties" />
+
+	<!-- Global properties for this build. -->
+	<property name="database.dir" value="database" />
+	<property name="lib.dir" value="lib" />
+
+	<!-- Classpath declaration. -->
+	<path id="lib.class.path">
+		<fileset dir="${lib.dir}">
+			<include name="**/*.jar" />
+		</fileset>
+	</path>
+
+	<!-- Start the HSQL DB server -->
+	<target name="startdb" description="Run HSQL database server with clean DB">
+		<!-- Delete database files -->
+		<delete dir="${database.dir}" />
+		<java classname="org.hsqldb.Server" fork="yes" classpathref="lib.class.path" failonerror="true">
+			<arg value="-database.0" />
+			<arg value="file:${database.dir}/db" />
+		</java>
+	</target>
+
+	<!-- Start the HSQL DB browser tool -->
+	<target name="startManager" description="Start HSQL DB manager">
+		<java classname="org.hsqldb.util.DatabaseManagerSwing" fork="yes" classpathref="lib.class.path" failonerror="true">
+			<arg value="-url" />
+			<arg value="${db.url}" />
+			<arg value="-driver" />
+			<arg value="${db.driver}" />
+		</java>
+	</target>
+
+	<!-- Stop the HSQL DB server -->
+	<target name="stopdb" description="Stop HSQL database server">
+		<sql driver="${db.driver}" url="${db.url}" userid="${db.user}" password="${db.pw}" onerror="continue">
+			<classpath refid="lib.class.path" />
+			SHUTDOWN;
+    	</sql>
+	</target>
+
+	<target name="createTables">
+		<echo message="CREATE TABLES USING: ${db.driver} ${db.url}" />
+		<sql driver="${db.driver}" url="${db.url}" userid="${db.user}" password="${db.pw}" onerror="continue">
+			<classpath refid="lib.class.path" />
+			CREATE TABLE PIZZAS (
+				CODE VARCHAR(16) NOT NULL PRIMARY KEY,
+				DESCRIPTION VARCHAR(256) NOT NULL,
+				PRICE DOUBLE NOT NULL
+			);
+    	</sql>
+	</target>
+
+	<target name="dropTables">
+		<echo message="DROP TABLES USING: ${db.driver} ${db.url}" />
+		<sql driver="${db.driver}" url="${db.url}" userid="${db.user}" password="${db.pw}" onerror="continue">
+			<classpath refid="lib.class.path" />
+			DROP TABLE Pizzas;
+	    </sql>
+	</target>
+
+	<target name="emptyTables">
+		<echo message="USING: ${db.driver} ${db.url}" />
+		<sql driver="${db.driver}" url="${db.url}" userid="${db.user}" password="${db.pw}">
+			<classpath refid="lib.class.path" />
+			DELETE FROM PIZZAS;
+	    </sql>
+	</target>
+
+
+	<target name="populateTables">
+		<echo message="USING: ${db.driver} ${db.url}" />
+		<sql driver="${db.driver}" url="${db.url}" userid="${db.user}" password="${db.pw}">
+			<classpath refid="lib.class.path" />
+			INSERT INTO PIZZAS(CODE, DESCRIPTION, PRICE) VALUES ('ma', 'Margerita', 9.5);
+			INSERT INTO PIZZAS(CODE, DESCRIPTION, PRICE) VALUES ('qs', 'Quatro stagione', 10.5);
+		</sql>
+
+	</target>
+
+	<target name="all" depends="dropTables,createTables,emptyTables,populateTables" />
+
+</project>

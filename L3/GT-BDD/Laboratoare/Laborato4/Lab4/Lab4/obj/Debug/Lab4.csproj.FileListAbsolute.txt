@@ -1,0 +1,11 @@
+C:\Documents and Settings\Administrator\Desktop\Laborator4\Lab4\Lab4\obj\Debug\Lab4.exe
+C:\Documents and Settings\Administrator\Desktop\Laborator4\Lab4\Lab4\obj\Debug\Lab4.pdb
+C:\Documents and Settings\Administrator\Desktop\Laborator4\Lab4\Lab4\bin\Debug\Lab4.exe
+C:\Documents and Settings\Administrator\Desktop\Laborator4\Lab4\Lab4\bin\Debug\Lab4.pdb
+C:\Documents and Settings\Administrator\Desktop\Laborator4\Lab4\Lab4\obj\Debug\ResolveAssemblyReference.cache
+C:\Documents and Settings\Administrator\Desktop\Laborator4\Lab4\Lab4\obj\Debug\Lab4.RezervariForm.resources
+C:\Documents and Settings\Administrator\Desktop\Laborator4\Lab4\Lab4\obj\Debug\Lab4.Properties.Resources.resources
+C:\Documents and Settings\Administrator\Desktop\Laborator4\Lab4\Lab4\obj\Debug\Lab4.csproj.GenerateResource.Cache
+C:\Documents and Settings\Administrator\Desktop\Laborator4\Lab4\Lab4\obj\Debug\Lab4.Start.resources
+F:\Scoala\An 2\Sem II\GT-BDD\Laboratoare\Laborato4\Lab4\Lab4\obj\Debug\Lab4.exe
+F:\Scoala\An 2\Sem II\GT-BDD\Laboratoare\Laborato4\Lab4\Lab4\obj\Debug\Lab4.pdb

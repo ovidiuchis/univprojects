@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="2.5" xmlns="http://java.sun.com/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd">
+    <context-param>
+        <param-name>anunturiTable</param-name>
+        <param-value>anunturi</param-value>
+    </context-param>
+    <context-param>
+        <param-name>alerteTable</param-name>
+        <param-value>alerte</param-value>
+    </context-param>
+    <context-param>
+        <param-name>dbuser</param-name>
+        <param-value>root</param-value>
+    </context-param>
+    <context-param>
+        <param-name>dbpass</param-name>
+        <param-value/>
+    </context-param>
+    <context-param>
+        <param-name>driver</param-name>
+        <param-value>com.mysql.jdbc.Driver</param-value>
+    </context-param>
+    <context-param>
+        <param-name>dburl</param-name>
+        <param-value>jdbc:mysql://localhost:3306/pw</param-value>
+    </context-param>
+    <listener>
+        <description>ServletContextListener</description>
+        <listener-class>app.Initializer</listener-class>
+    </listener>
+    <session-config>
+        <session-timeout>
+            30
+        </session-timeout>
+    </session-config>
+    <welcome-file-list>
+        <welcome-file>client.jsp</welcome-file>
+		<welcome-file>operator.jsp</welcome-file>
+    </welcome-file-list>
+</web-app>

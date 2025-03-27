@@ -1,0 +1,19 @@
+domains 
+      element=symbol
+      arbore=arb(element,arbore,arbore);nil
+predicates
+      adancime(arbore,integer,integer)
+      maxim(integer,integer,integer)
+      rez(arbore,integer)
+      creeaza_arb(symbol,arbore)
+clauses 
+      creeaza_arb(E5,arb(E5,nil,nil)).
+      maxim(E,0,E):-!.
+      maxim(E1,E2,E1):-E1>E2,!.
+      maxim(E1,E2,E2):-E2>E1.
+      adancime(nil,_,0):-!.      
+      adancime(arb(_,L1,L2),N,R):-N=N+1,
+                                adancime(L1,N,R1),
+                                adancime(L2,N,R2),
+                                maxim(R1,R2,R).
+      rez(L,R):-adancime(L,0,R).                          

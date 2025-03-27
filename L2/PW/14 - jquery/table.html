@@ -1,0 +1,55 @@
+<html>
+<head>
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+    <script type="text/javascript">
+
+    function selectRow(row) {
+         var obj = $(row).find("td");
+         obj.css('background-color', 'red');
+         obj.css('color', 'white');
+     }
+
+     function unselectRow(row) {
+         var obj = $(row).find("td");
+         obj.css('background-color', 'white');
+         obj.css('color', 'black');
+     }
+
+     function selectAndUnselect(td, f) {
+             f($(td.parentNode));
+     }
+
+     $(function() {
+             $("#tabel td").mouseover(function() {
+                 selectAndUnselect(this, selectRow);
+             }).mouseout(function() {
+                 selectAndUnselect(this, unselectRow);
+             });
+     });
+
+    </script>
+
+    <style type="text/css">
+    table {
+        border: 1px solid black;
+        border-collapse: collapse;
+    }
+
+    td {
+        padding: 4px;
+        border: 1px solid black;
+        font-family: Tahoma;
+        font-size: 12px;
+    }
+    </style>
+</head>
+<body>
+<table cellspacing="0" cellpadding="0" id="tabel">
+    <tr><td>Memorie</td><td>DDRAM II</td><td>2GB</td></tr>
+    <tr><td>Harddisk</td><td>SATA</td><td>2TB</td></tr>
+    <tr><td>Monitor</td><td>LCD</td><td>22 inch</td></tr>
+    <tr><td>DVD</td><td>Double Layer</td><td>24X</td></tr>
+    <tr><td>Video</td><td>GeForce</td><td>8600GT</td></tr>
+</table>
+</body>
+</html>

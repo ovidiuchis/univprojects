@@ -1,0 +1,8 @@
+C:\Faculta\GTBDD\Laborator4\Lab4\Lab4\bin\Debug\Lab4.exe
+C:\Faculta\GTBDD\Laborator4\Lab4\Lab4\bin\Debug\Lab4.pdb
+C:\Faculta\GTBDD\Laborator4\Lab4\Lab4\obj\Debug\ResolveAssemblyReference.cache
+C:\Faculta\GTBDD\Laborator4\Lab4\Lab4\obj\Debug\Lab4.RezervariForm.resources
+C:\Faculta\GTBDD\Laborator4\Lab4\Lab4\obj\Debug\Lab4.Properties.Resources.resources
+C:\Faculta\GTBDD\Laborator4\Lab4\Lab4\obj\Debug\Lab4.csproj.GenerateResource.Cache
+C:\Faculta\GTBDD\Laborator4\Lab4\Lab4\obj\Debug\Lab4.exe
+C:\Faculta\GTBDD\Laborator4\Lab4\Lab4\obj\Debug\Lab4.pdb

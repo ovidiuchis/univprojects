@@ -1,0 +1,20 @@
+D:\faculta\bd2\Lab5b\Lab5\obj\Debug\ResolveAssemblyReference.cache
+D:\faculta\bd2\Lab5b\Lab5\obj\Debug\Lab5.Form1.resources
+D:\faculta\bd2\Lab5b\Lab5\obj\Debug\Lab5.Monitorizare.resources
+D:\faculta\bd2\Lab5b\Lab5\obj\Debug\Lab5.Properties.Resources.resources
+D:\faculta\bd2\Lab5b\Lab5\obj\Debug\Lab5b.csproj.GenerateResource.Cache
+D:\faculta\bd2\Lab5b\Lab5\obj\Debug\Lab5.exe
+D:\faculta\bd2\Lab5b\Lab5\bin\Debug\Lab5.exe
+D:\faculta\bd2\Lab5b\Lab5\bin\Debug\Lab5.pdb
+D:\faculta\bd2\Lab5b\Lab5\obj\Debug\Lab5.pdb
+C:\Faculta\GTBDD\Laborator5\Laborator5OCC\Lab5b\Lab5\obj\Debug\Lab5.exe
+C:\Faculta\GTBDD\Laborator5\Laborator5OCC\Lab5b\Lab5\obj\Debug\Lab5.pdb
+C:\Faculta\GTBDD\Laborator5\Laborator5OCC\Lab5b\Lab5\bin\Debug\Lab5.exe
+C:\Faculta\GTBDD\Laborator5\Laborator5OCC\Lab5b\Lab5\bin\Debug\Lab5.pdb
+C:\Faculta\GTBDD\Laborator5\Laborator5OCC\Lab5b\Lab5\obj\Debug\ResolveAssemblyReference.cache
+C:\Faculta\GTBDD\Laborator5\Laborator5OCC\Lab5b\Lab5\obj\Debug\Lab5.Form1.resources
+C:\Faculta\GTBDD\Laborator5\Laborator5OCC\Lab5b\Lab5\obj\Debug\Lab5.Monitorizare.resources
+C:\Faculta\GTBDD\Laborator5\Laborator5OCC\Lab5b\Lab5\obj\Debug\Lab5.Properties.Resources.resources
+C:\Faculta\GTBDD\Laborator5\Laborator5OCC\Lab5b\Lab5\obj\Debug\Lab5b.csproj.GenerateResource.Cache
+C:\Documents and Settings\Administrator\Desktop\Laborator5OCC\Lab5OCC\Lab5\obj\Debug\Lab5.exe
+C:\Documents and Settings\Administrator\Desktop\Laborator5OCC\Lab5OCC\Lab5\obj\Debug\Lab5.pdb

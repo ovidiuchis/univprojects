@@ -1,0 +1,165 @@
+<html>
+  <head>
+  <title>Va rugam sa rezolvatii puzzle</title>
+  
+  <script language="JavaScript">
+  <!--
+  
+  var n = 4;
+  var i, j;
+  var M = new Array(n);
+  for (i = 0; i < n; i++)
+    M[i] = new Array(n);
+  var l, c;
+
+  function muta(i, j) {
+    if ((l + i < 0) || (l + i >= n))
+      return false;
+    if ((c + j < 0) || (c + j >= n))
+      return false;
+    
+    M[l][c] = M[l+i][c+j];
+    M[l+i][c+j] = 0;
+    l = l + i;
+    c = c + j;
+    return true;    
+  } 
+  
+  function mutare() {
+    var r
+    r = Math.floor(Math.random() * 4);
+    if (r == 0) 
+      muta(0, -1);
+    if (r == 1)
+      muta(-1, 0);
+    if (r == 2)
+      muta(0, 1)
+    if (r == 3)
+      muta(1, 0);
+  }
+  
+
+  function init() {
+  
+     for (i = 0; i < n; i++) 
+       for (j = 0; j < n; j++)
+         M[i][j] = (i*n+j+1) % 16;
+         
+     afisare(1);
+     alert('This is your original puzzle. Press Ok!');
+
+     l = n - 1;
+     c = n - 1;
+     for (var k = 0; k < 3000; k++) {
+       mutare();       
+       afisare(0);
+     }
+  }
+  
+  function afisare(tip) {
+  // tip = 1 - tabel original
+  // tip = 0 - tabel intermediar     
+    var tabel = obtineTabel(tip);
+    var div = document.getElementById('puzzle');
+    div.innerHTML = tabel;
+  }
+  
+  function gata() {
+    var x = new Array(n*n);
+
+    for (i = 0; i < n; i++) 
+      for (j = 0; j < n; j++)
+        x[n * i + j] = M[i][j];
+        
+    if (x[n*n-1] != 0) return false;
+    
+    for (i = 0; i < n*n-2; i++)
+      if (x[i] > x[i+1])
+        return false;
+    
+    return true;
+  }
+
+
+  function laClick(i, j) {
+    var l = -1, c = -1;
+    if ((j > 0) && (M[i][j-1] == 0)) {
+      l = i;
+      c = j - 1;
+    }
+    if ((j < n-1) && (M[i][j+1] == 0)) {
+      l = i;
+      c = j + 1;
+    }
+    if ((i > 0) && (M[i-1][j] == 0)) {
+      l = i - 1;
+      c = j;
+    }
+    if ((i < n-1) && (M[i+1][j] == 0)) {
+      l = i + 1;
+      c = j;
+    }
+    
+    if ((l == -1) || (c == -1))
+      return;
+
+    M[l][c] = M[i][j];
+    M[i][j] = 0;
+    
+    afisare(0);
+    
+    if (gata()) {
+      afisare(1);
+      alert('Felicitari. Ati terminat puzzleul');
+      init();
+      afisare(1);
+    }
+  }
+  
+  function obtineTabel(tip) {
+  // tip = 1 - tabel original
+  // tip = 0 - tabel intermediar
+    var tabel;
+    tabel = '<table border="1" cellspacing="0px" cellpadding="0px">'
+    for (i = 0; i < n; i++) {
+      tabel = tabel + '<tr>';
+      for (j = 0; j < n; j++) 
+        if (M[i][j] != 0) {
+          var l, c;
+          l = parseInt((M[i][j]-1) / n);
+          c = (M[i][j]-1) % n;
+          tabel = tabel + '<td height="20px" width="20px"><a href="javascript:laClick(' + i +',' + j + ')"><img border="0" src="images/p_' + l + '_' + c + '.jpg"/></a></td>';
+        }
+        else {
+          if (tip == 0)
+            tabel = tabel + '<td height="20px" width="20px" bgcolor="red"></td>';
+          else {
+            l = n - 1
+            c = n - 1
+            tabel = tabel + '<td height="20px" width="20px"><a href="javascript:laClick(' + i +',' + j + ')"><img border="0" src="images/p_' + l + '_' + c + '.jpg"/></a></td>';
+          }
+        }
+      tabel = tabel + '</tr>';
+    }
+    tabel = tabel + '</table>';
+    return tabel;
+  }
+  
+  -->
+  </script>
+  
+  </head>
+  
+  
+  <body>
+  
+  <div id="puzzle">  
+  <script language="JavaScript">
+    init();
+  </script>
+  </div>
+  
+  
+  </body>
+  
+</html>

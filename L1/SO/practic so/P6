@@ -1,0 +1,37 @@
+# 5. Sa se scrie un program Shell care primeste ca parametri doua nume de
+# directoare si muta ramura desemnata de cel de-al doilea director ca
+# subramura a primului, adaugand extensia .unu la fiecare fisier.
+
+#!/bin/bash
+if [ -z $1 ]
+     then 
+         echo "nu ati introdus 2  parametri."
+     else
+         if [ -z $2 ]
+                then 
+                     echo "Nu ati introdus 2 parametri."
+                else
+                     if [ ! -z $3 ]
+                        then
+                             echo "Prea multi parametri."
+                     fi
+         fi
+fi
+ 
+if [ ! -d $1 ]
+       then 
+           echo "Parametru 1 nu e director."
+       else
+           if [ ! -d $2 ]
+                  then 
+                       echo "Parametru 2 nu e director."    
+                  else
+                       cp -R $2 $1    #copiaza recursiv ramura desemnata de
+                                      #parametrul 2 ca subramura a param 1
+           fi
+fi
+
+find $1 -type f | while read fis          #cauta in directorul 1 fisere
+  do
+    mv $fis $fis.unu                #daca gaseste le pune extensia .unu
+  done

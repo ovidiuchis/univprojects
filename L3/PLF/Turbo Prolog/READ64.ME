@@ -1,0 +1,132 @@
+
+
+
+
+
+
+.PO4
+PRODUCT : TURBO PROLOG                                       NUMBER : 305
+VERSION : ALL
+     OS : PC-DOS
+   DATE : June 3, 1986                                         PAGE : 1/3
+
+  TITLE : PROGRAM 64 INFORMATION
+
+
+
+.PO8 
+
+
+Sample  programs  64  and  65,   EXAMPLE64.PRO  and  EXAMPLE65.C, 
+respectively, demonstrate how to access a subroutine written in C 
+from  a Turbo Prolog program.   The process is similar for Pascal 
+and FORTRAN.
+
+We  use Lattice C 2.15 or later to compile EXAMPL65.C to an  .OBJ 
+file.
+
+   Note: Large memory models must be used when linking
+         modules to Turbo Prolog from any other language.
+
+STEP 1:
+
+Using the C compiler issue the following commands:
+
+   lC1 EXAMPL65 -mL -N -S -iC -b
+   lC2 EXAMPL65 -z
+
+or
+
+   LCL EXAMPLE65
+
+This produces a new file: EXAMPL65.obj
+
+STEP 2:    There are two ways to continue.
+
+Option 1
+  Define a project in Turbo Prolog using the option, Module list, 
+  under  the Files pull-down menu.   For this example,  create  a 
+  file  EXAMPL64.prj which contains:
+
+                EXAMPL64+EXAMPL65+.
+
+  Now, compile EXAMPL64.PRO to an EXE file.
+
+  Note:  The  project  file  name must be the same  as  the  main 
+  program file. 
+.pa
+
+.PO4
+
+PRODUCT : TURBO PROLOG                                       NUMBER : 305
+VERSION : ALL
+     OS : PC-DOS
+   DATE : June 3, 1986                                         PAGE : 2/3
+
+  TITLE : PROGRAM 64 INFORMATION
+
+
+.PO8 
+
+Option 2
+   Use the IBM PC LINK PROGRAM DIRECTLY.  Compile EXAMPL64.PRO to 
+   an OBJ file.   Then link the files as described in 11.10.4  of 
+   the   manual.  LNKP64.BAT  is  a sample batch file  that  will 
+   achieve the LINK step.
+
+
+USING MICROSOFT C VERSION 3.0 or later
+--------------------------------------
+
+When using Microsoft C,  version 3.0 or later, minor changes must  
+be made to both EXAMPL64.PRO and EXAMPL65.C.   Specifically,  '_' 
+must be prepended to every C function used as a predicate,  i.e., 
+'treble' becomes '_treble' as illustrated below.
+
+EXAMPL64.PRO as it must be changed to work with Microsoft C:
+
+global predicates
+   _treble(integer,integer) - (i,o) language c  
+
+goal
+   write("Type an integer "),
+   readint(A),
+   _treble(A,T),
+   write("Treble that number is ",T),nl.
+
+EXAMPL65.C, modified to avoid a link error in Microsoft C.
+
+int _acrtused;  /* this prevents link error from occuring */
+
+treble_0(x,y) 
+int x; 
+int *y;
+{
+  *y = 3 * x;  /* the value of x can be used in treble */
+}
+
+The C program needs to be compiled as follows:
+
+     msc /Gs /AL exampl65.c
+
+The  /Gs  option turns off stack checking,  and the  /AL  options 
+selects the large memory model.
+
+The command line for link should look like this:
+
+     link /NOD init+exampl65+exampl64+exampl64.sym,prog,,prolog
+
+.PO4
+
+PRODUCT : TURBO PROLOG                                       NUMBER : 305
+VERSION : ALL
+     OS : PC-DOS
+   DATE : June 3, 1986                                         PAGE : 3/3
+
+  TITLE : PROGRAM 64 INFORMATION
+
+
+.PO8 
+
+The /NOD option prevents link from linking in the default library 
+for C.

@@ -1,0 +1,10 @@
+domains
+   el=integer
+   lista=el*
+   listad=lista*
+predicates
+   comb(lista,integer,listad)
+clauses
+   comb([A|_],1,[[A]]).
+   comb([_|L],N,T):-comb(L,N,T).
+   comb([A|L],N,[[A]|T]):-N>1,N1=N-1,comb(L,N1,T).      

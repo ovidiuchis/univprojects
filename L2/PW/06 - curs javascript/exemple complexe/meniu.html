@@ -1,0 +1,47 @@
+<html>
+<head>
+    <script type="text/javascript">
+        var meniuri = ["Meniu1","Meniu2","Meniu3","Meniu4"];
+        var idSubMeniuri = ["submeniu1","submeniu2","submeniu3","submeniu4"];
+        var submeniuri = [["SubMeniu1.1","SubMeniu1.2"],["S2.1"],["Men3.1","Men3.2"],["SubMeniu4.1","SubMeniu4.2","SubMeniu4.3"]];
+
+        function deschideSubmeniu(i) {
+            inchideSubMeniuri();
+            var submeniu = document.getElementById(idSubMeniuri[i]);
+            submeniu.innerHTML = obtineSubmeniu(i);
+        }
+
+        function obtineSubmeniu(i) {
+            var subMeniu = '<table border="1" cellpadding="0" cellspacing="0" class="submeniu">';
+            var s = submeniuri[i];
+            for (var j = 0; j < s.length; j++) {
+                subMeniu = subMeniu + "<tr><td>" + s[j] + "</td></tr>";
+            }
+            subMeniu = subMeniu + "</table>"
+            return subMeniu;
+        }
+
+        function inchideSubMeniuri() {
+            for (var j = 0; j < meniuri.length; j++) {
+                document.getElementById(idSubMeniuri[j]).innerHTML = '';
+            }
+        }
+    </script>
+</head>
+<body>
+<table border="1" cellpadding="0" cellspacing="0" onclick="inchideSubMeniuri();">
+    <tr>
+        <td id="meniu1" onmouseover="deschideSubmeniu(0);"><a>Meniu1</a></td>
+        <td id="meniu2" onmouseover="deschideSubmeniu(1);"><a>Meniu2</a></td>
+        <td id="meniu3" onmouseover="deschideSubmeniu(2);"><a>Meniu3</a></td>
+        <td id="meniu4" onmouseover="deschideSubmeniu(3);"><a>Meniu4</a></td>
+    </tr>
+    <tr>
+        <td id="submeniu1"/>
+        <td id="submeniu2"/>
+        <td id="submeniu3"/>
+        <td id="submeniu4"/>
+    </tr>
+</table>
+</body>
+</html>

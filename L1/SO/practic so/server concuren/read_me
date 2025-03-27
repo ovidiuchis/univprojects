@@ -1,0 +1,41 @@
+_______________________________________________________________________________
+NUME: Besleaga Catalin
+GRUPA: 212
+SEMIGRUPA: 212-1
+USERNAME: bcir0332
+_______________________________________________________________________________
+PROBLEMA:
+ Clientul ii transmite serverului un nume de director si primeste
+de la acesta lista tuturor fisierelor text din directorul
+respectiv, respectiv un mesaj de eroare daca directorul
+respectiv nu exista.
+_______________________________________________________________________________
+ASPECTE TERORETICE:
+ In rezolvarea problemei am folosit functiile de citire din fisier si de scriere
+functii de deschidere de fisiere si de inchidere, functii de creare de fifo si
+de stergere: mkfifo(nume,mod), unlink(nume);
+_______________________________________________________________________________
+PREZENTAREA SOLUTIEI:
+  Pentru rezolvarea problemei am creat 2 programe: un program client si
+un program server. Programul server va lucra intotdeauna in background asteptand
+sa primeasca mesaje de la client.
+  Clientul verifica mai intai dak a primit 2 argumente in lista de comanda dupa
+care creeaza un fifo cu numele fifo_pid unde pid este pidul propriu dupa care
+scrie in fifo-ul creat de server un mesaj prin care ii transmite pid-ul si un sir
+de caractere primit ca argument si asteapta sa primeasca raspuns de la server,
+afiseaza raspunsul dupa care isi termina executia.
+  Serverul creaza un fifo cu numele serverfifo si asteapta pana cand cineva ii
+scrie un mesaj in care ii transmite pid-ul si un director iar cu ajutorul unei
+functii numite procesare verifica dak cuvantul transmis este chiar director, apoi
+verifica care din fisierele din acel director sunt fisiere text si le returneaza
+intr-un mesaj scris in fifo-ul clientului. Daca clientul ii transmite mesajul exit
+serverul isi va termina executia. 
+_______________________________________________________________________________
+INSTRUCTIUNI DE RULARE:
+ 
+  * Instructiuni de compilare a solutiei (unde este cazul)
+	- gcc -o server server.c
+	- gcc -o client client.c
+  * Instructiuni de rulare a programului:
+      - intro consola separata rulam ./server si in alta ./client <dir>
+      - cum se opreste programul : ./client exit

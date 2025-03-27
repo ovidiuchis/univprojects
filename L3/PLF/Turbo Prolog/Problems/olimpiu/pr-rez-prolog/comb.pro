@@ -1,0 +1,11 @@
+domains
+	el=integer
+	lista=el*
+predicates
+	comb(lista,el,lista)
+clauses
+	comb([H|_],1,[H]):-write("a",H),nl.
+	comb([_|T],K,L):-write("b",K,T),nl,
+	comb(T,K,L),write("revin"),nl.
+	comb([H|T],K,[H|T1]):-write("c",K,H,T),nl,
+	K<>1,K1=K-1,comb(T,K1,T1).

@@ -1,0 +1,13 @@
+domains
+  list=integer*
+predicates
+  invers(list,list)
+  conc(list,list,list)
+clauses
+  conc([],L,L).
+  conc([X|L1],L2,[X|L3]):-
+                          conc(L1,L2,L3). 
+  invers([],[]).
+  invers([X|H],L):-
+     invers(H,S),
+     conc(S,[X],L).

@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<comanda numeClient="Ghiorghe">
+  <produs>
+    <idp>Tastatura</idp>
+    <cantitate>2</cantitate>
+  </produs>
+  <produs>
+    <idp>Monitor</idp>
+    <cantitate>1</cantitate>
+  </produs>
+</comanda>

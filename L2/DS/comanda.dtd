@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!ELEMENT comanda (produs*)>
+<!ATTLIST comanda numeClient CDATA "numeClient">
+<!ELEMENT produs (idp, cantitate)>
+<!ELEMENT idp (#PCDATA)>
+<!ELEMENT cantitate (#PCDATA)>

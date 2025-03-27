@@ -1,0 +1,24 @@
+/*P3.2*/
+
+domains
+	arbore=arb(integer,arbore,arbore);nil
+predicates
+	create(integer,arbore)
+	insertLeft(arbore,arbore,arbore)
+	insertRight(arbore,arbore,arbore)
+	suma(arbore,integer,integer)
+clauses
+	create(E,arb(E,nil,nil)).
+	insertLeft(A,arb(E,_,D),arb(E,A,D)).
+	insertRight(A,arb(E,S,_),arb(E,S,A)).
+	suma(nil,_,0).
+	suma(arb(R,S,D),N,M):-
+		N1=N+1,
+		suma(S,N1,M1),
+		suma(D,N1,M2),
+		M=M1+M2+R.
+goal
+   create(1,S),
+   insertLeft(arb(2,nil,nil),S,C),
+   insertRight(arb(3,nil,arb(4,nil,nil)),C,A),
+   suma(A,1,X).	

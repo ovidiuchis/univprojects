@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!-- Created with Liquid XML Studio Developer Edition (Trial) 8.1.6.2625 (http://www.liquid-technologies.com) -->
+<comanda numeClient="Jon">
+    <produs>
+        <idp>Monitor</idp>
+        <cantitate>2</cantitate>
+    </produs>
+    <produs>
+        <idp>Tastatura</idp>
+        <cantitate>1</cantitate>
+    </produs>
+    <produs>
+        <idp>Tastatura</idp>
+        <cantitate>0</cantitate>
+    </produs>
+    <produs>
+        <idp>Monitor</idp>
+        <cantitate>1</cantitate>
+    </produs>
+    <produs>
+        <idp>Tastatura</idp>
+        <cantitate>2</cantitate>
+    </produs>
+</comanda>

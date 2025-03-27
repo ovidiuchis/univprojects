@@ -1,0 +1,52 @@
+/*Dandu-se o lista liniara numerica, sa se stearga
+toate secventele de valori consecutive.*/
+
+domains
+        elem=integer
+        list=elem*
+predicates
+          lista_noua(list,list)
+          adauga(elem,list,list)
+          invers(list,list)
+          run(list)
+          tiplist(list)
+clauses
+        tiplist([H|T]):-
+          write(H),
+          nl,
+          tiplist(T).
+        invers([],[]).
+        invers([A|L],X):-
+           invers(L,Y),
+           adauga(A,Y,X).
+        adauga(E,[],[E]).
+        adauga(E,[A|L],[A|X]):-
+             adauga(E,L,X).
+        lista_noua([],[]).
+        lista_noua([E],[E]).
+        lista_noua([H|[H1|[H2|T]]],L):-
+           H1=H+1,
+           H2=H1+1,
+           lista_noua([H1|[H2|T]],L).
+        lista_noua([H|[H1|[H2|T]]],L):-
+           H1<>H+1,
+           H2=H1+1,
+           !,
+           lista_noua([H1|[H2|T]],L1),
+           adauga(H,L1,L).
+        lista_noua([H|[H1|[H2|T]]],L):-
+           H1=H+1,
+           H2<>H1+1,
+           !,
+           lista_noua(T,L1),
+           adauga(H2,L1,L).
+         lista_noua([H|[H1|[H2|T]]],L):-
+            H1<>H+1,
+            H2<>H1+1,
+            !,
+            lista_noua([H1|[H2|T]],L1),
+            adauga(H,L1,L).
+         run(L):-
+             lista_noua(L,L1),
+             invers(L1,L2),
+             tiplist(L2).

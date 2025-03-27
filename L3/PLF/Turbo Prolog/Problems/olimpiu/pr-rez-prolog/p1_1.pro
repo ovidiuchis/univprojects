@@ -1,0 +1,9 @@
+domains  
+   el=integer
+   list=el*
+predicates
+   stergere(list,integer,list)
+clauses
+   stergere([],_,[]).
+   stergere([E|T],E,T1):-!,stergere(T,E,T1).
+   stergere([H|T],E,[H|T1]):-stergere(T,E,T1).      

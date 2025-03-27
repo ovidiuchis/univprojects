@@ -1,0 +1,18 @@
+#!/bin/bash
+#zile=`date '+%d'`
+#data=`date -d '-'$zile' days' '+%Y%m%d%H%M%S'`
+#if [ $# = 0 ]
+#then
+# echo "Nu ati introdus nici un username"
+#else
+# for i
+# do
+ read i
+   last -R -3 $i || echo "Userul $i nu s-a conectat niciodata"
+#  last -R -3 $i
+#  if [ $? = 1 ] 
+#  then
+#   echo "Userul $i nu s-a conectat niciodata"  
+#  fi
+# done
+#fi

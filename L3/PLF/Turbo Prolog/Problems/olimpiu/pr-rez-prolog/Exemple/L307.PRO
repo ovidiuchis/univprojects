@@ -1,0 +1,17 @@
+/* Reuniunea a doua multimi */
+domains
+  mul=integer*
+predicates
+  reuniune(mul,mul,mul)
+  membru(integer,mul)
+clauses
+  membru(E,[E|_]).
+  membru(E,[_|T]):-
+    membru(E,T).
+  reuniune([],M,M).
+  reuniune([X|M1],M,[X|M2]):-
+    reuniune(M1,M,M2),
+    not(membru(X,M)).
+  reuniune([X|M1],M,M2):-
+    reuniune(M1,M,M2),
+    membru(X,M).

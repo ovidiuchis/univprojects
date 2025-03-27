@@ -1,0 +1,17 @@
+/* Intersectia a doua multimi */
+domains
+  mul=integer*
+predicates
+  intersectie(mul,mul,mul)
+  membru(integer,mul)
+clauses
+  membru(E,[E|_]).
+  membru(E,[_|T]):-
+    membru(E,T).
+  intersectie([],_,[]).
+  intersectie([X|M1],M,[X|M2]):-
+    intersectie(M1,M,M2),
+    membru(X,M).
+  intersectie([X|M1],M,M2):-
+    intersectie(M1,M,M2),
+    not(membru(X,M)).

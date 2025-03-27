@@ -1,0 +1,10 @@
+domains 
+  el=integer
+  list=el*
+predicates
+  length(list,integer)
+clauses
+  length([],0).
+  length([_|T],L):-length(T,L1),L=L1+1.
+goal:
+  length([1,2,3,4],X). 

@@ -1,0 +1,31 @@
+/*P2.2.Predecesorul unui numar.*/
+
+domains
+	elem=integer
+	list=elem*
+predicates
+	inv(list,list)
+	conc(list,list,list)
+	pred(list,list)
+	pred0(list,list)
+clauses
+	conc([],L,L).
+	conc([H|L1],L2,[H|L3]):-
+		conc(L1,L2,L3).
+	inv([],[]).
+	inv([H|T],L):-
+		inv(T,L2),
+		conc(L2,[H],L).
+	pred(A,B):-
+		inv(A,A1),
+		pred0(A1,B1),
+		inv(B1,B).
+	pred0([1],[]):-!.
+	pred0([A|L1],L2):-
+		A>0,
+		!,
+		A1=A-1,
+		L2=[A1|L1].
+	pred0([_|L1],L2):-
+		pred(L1,LL),
+		L2=[9|L1].

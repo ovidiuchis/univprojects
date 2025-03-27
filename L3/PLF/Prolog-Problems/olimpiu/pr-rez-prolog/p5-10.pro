@@ -1,0 +1,19 @@
+domains
+   el=integer
+   list=el*
+   list1=list*
+predicates
+   adaugare(list,list1,list1)
+   crescator(list,list,list1,list1)
+   strict(list,list1)
+clauses
+   adaugare([],[],[]):-!.
+   adaugare(L,[],[L]):-!.
+   adaugare(L,L1,L2):-L2=[L|L1],!.
+   crescator([],_,[],[]):-!.
+   crescator([],_,L,L):-!.
+   crescator([H,H1|T],L1,L2,L3):-H1=H+1,!,L11=[H|L1],
+                         crescator([H1|T],L11,L2,L3),!.
+   crescator([H1|T],L1,L2,L3):- adaugare(L1,L2,L22),
+                        crescator([H1|T],[],L22,L3).                                
+   strict(L1,L2):-crescator(L1,[],[],L2).

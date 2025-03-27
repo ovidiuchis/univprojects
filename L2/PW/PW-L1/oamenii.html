@@ -1,0 +1,141 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<title >Cluj Napoca</title>
+<style type="text/css"> 
+a.c1:link {color: white; text-decoration: none; font-size: 16pt }
+a.c1:visited {color: #F8F8F8 ; text-decoration: none; }
+a.c1:hover {color: orange; text-decoration: underline;font-size: 16pt }
+a.c1:active {color: red; }
+</style>
+<script type="text/javascript">
+            function selectColumnAtIndex(id){
+                var tabel = document.getElementById('tabel');
+                var rows = tabel.getElementsByTagName('tr');
+                var columnId = id -1; 
+			     alert('Rows' +rows.length)          
+                for (var i = 0; i < rows.length; i++) {
+                    var columns = rows[i].getElementsByTagName('td');                                       
+                        if(columns[columnId].style.backgroundColor == ''){
+                            columns[columnId].style.backgroundColor = '#0FFF00';
+                        } else  {
+                            columns[columnId].style.backgroundColor = '';
+                        }
+                }           
+            }
+</script>
+</head>
+<body>
+<div style="color:#000000">
+	<br><br>
+	<div align = center>
+		<img src="banner.jpg" alt ="banner" width=1000>  
+	</div>
+</div>
+<div  style="font-family:Arial; "  align=center >
+	<table   cellpadding="0"  cellspacing="0" style="width:1000px;height:1200px; background-color:#D8D8D8 ;" >		
+		<tr valign=top style="background-color:#666666;font-weight:bold;height:20px;"> 
+			<td align=center width="20%" > <a href = index.html class="c1"  >Acasa  </a >	</td>
+			<td align=center width="20%"> <a href = oamenii.html class="c1"  > Oamenii </a> </td>
+			<td align=center width="20%"> <a href = orasul.html class="c1"  > Orasul </a> </td>
+			<td align=center width="20%"> <a href = harta.html class="c1"  > Harta </a> </td>
+			<td align=center width="20%"> <a href = contact.html class="c1"  > Contact </a> </td>		
+		</tr>
+		<tr valign=top>
+		<td colspan="5"  >
+			<br><br><br><br>
+			<table id="tabel" align=center border="1" cellpadding="10"  cellspacing="0" style="background-color:#F8F8F8;border-color:#FFFFFF ">
+				<tr style="font-weight:bold;background-color:#F0F0F0">
+					<td onClick="selectColumnAtIndex(1);" onClick="selectColumnAtIndex(1);">Anul</td>
+					<td onClick="selectColumnAtIndex(2);" onClick="selectColumnAtIndex(2);">Populatia</td>
+					<td onClick="selectColumnAtIndex(3);" onClick="selectColumnAtIndex(3);">Romani</td>
+					<td onClick="selectColumnAtIndex(4);" onClick="selectColumnAtIndex(4);">Maghiari </td>
+					<td onClick="selectColumnAtIndex(5);" onClick="selectColumnAtIndex(5);">Germani </td>
+					<td onClick="selectColumnAtIndex(6);" onClick="selectColumnAtIndex(6);">Evrei </td>
+					<td onClick="selectColumnAtIndex(7);" onClick="selectColumnAtIndex(7);">Tigani </td>
+					<td onClick="selectColumnAtIndex(8);" onClick="selectColumnAtIndex(8);">Alte etnii </td>
+				</tr>
+				<tr style="font-weight:lighter;">
+					<td>1941</td>
+					<td>114.984</td>
+					<td>11.255</td>
+					<td>98.502 </td>
+					<td>1.618 </td>
+					<td>2.669 </td>
+					<td>618 </td>
+					<td>229 </td>
+				</tr>
+				<tr style="font-weight:lighter;">
+					<td>1956</td>
+					<td>154.723</td>
+					<td>74.623</td>
+					<td>77.839 </td>
+					<td>1.115 </td>
+					<td>525 </td>
+					<td>237 </td>
+					<td>315 </td>
+				</tr>
+				<tr style="font-weight:lighter;">
+					<td>1966</td>
+					<td>185.663	</td>
+					<td>104.914</td>
+					<td>76.934	 </td>
+					<td>1.333 </td>
+					<td>1.689 </td>
+					<td>178 </td>
+					<td>489 </td>
+				</tr>
+				<tr style="font-weight:lighter;">
+					<td>1977</td>
+					<td>262.858	</td>
+					<td>173.003</td>
+					<td>86.215 </td>
+					<td>1.480 </td>
+					<td>1.009 </td>
+					<td>628 </td>
+					<td>413 </td>
+				</tr>
+				<tr style="font-weight:lighter;">
+					<td>1992</td>
+					<td>328.602</td>
+					<td>251.697</td>
+					<td>74.591 </td>
+					<td>937 </td>
+					<td>35 </td>
+					<td>1.047 </td>
+					<td>187</td>
+				</tr>
+				<tr style="font-weight:lighter;">
+					<td >2002</td>
+					<td>317.953</td>
+					<td>252.433</td>
+					<td>60.287 </td>
+					<td>734 </td>
+					<td>217 </td>
+					<td>3.029 </td>
+					<td>1.070 </td>
+				</tr>
+			</table>
+		</td>		
+		</tr>
+		<tr valign=top>
+			<td align=center colspan="5" ><br> <img src= "people.png" alt="date recensamant" ></td>
+		</tr>
+		<tr valign=bottom style="font-weight:lighter;height:10px;font-size: 8pt">
+			<td colspan="5"> Copyright Ovidiu Chis 2010 </td>
+		</tr>
+	</table>
+</div>
+ <p align = center>
+    <a href="http://validator.w3.org/check?uri=referer"><img
+        src="http://www.w3.org/Icons/valid-html401"
+        alt="Valid HTML 4.01 Transitional" height="31" width="88"></a>
+
+    <a href="http://jigsaw.w3.org/css-validator/check/referer">
+        <img style="border:0;width:88px;height:31px"
+            src="http://jigsaw.w3.org/css-validator/images/vcss"
+            alt="Valid CSS!" />
+    </a>
+</p>
+</body>
+</html>

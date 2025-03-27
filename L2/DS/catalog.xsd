@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--Created with Liquid XML Studio Developer Edition (Trial) 8.1.6.2625 (http://www.liquid-technologies.com)-->
+<xs:schema elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="catalog" type="catalogType" />
+  <xs:complexType name="catalogType">
+    <xs:sequence>
+      <xs:element name="categorie" type="categorieType" minOccurs="0" maxOccurs="unbounded" />
+    </xs:sequence>
+    <xs:attribute name="data" type="xs:string" default="data_cat" />
+  </xs:complexType>
+  <xs:element name="categorie" type="categorieType" />
+  <xs:complexType name="categorieType">
+    <xs:sequence>
+      <xs:element name="denumireC" type="denumireCType" />
+      <xs:element name="produs" type="produsType" minOccurs="0" maxOccurs="unbounded" />
+    </xs:sequence>
+    <xs:attribute name="codc" type="xs:string" default="id" />
+    <xs:attribute name="valabilDela" type="xs:string" default="valdela" />
+    <xs:attribute name="valabilPanala" type="xs:string" default="valpanla" />
+    <xs:attribute name="premium" type="xs:string" default="da/nu" />
+  </xs:complexType>
+  <xs:element name="denumireC" type="denumireCType" />
+  <xs:complexType name="denumireCType">
+    <xs:simpleContent>
+      <xs:extension base="xs:string" />
+    </xs:simpleContent>
+  </xs:complexType>
+  <xs:element name="produs" type="produsType" />
+  <xs:complexType name="produsType">
+    <xs:sequence>
+      <xs:element name="denumireP" type="denumirePType" />
+      <xs:element name="pret" type="pretType" />
+      <xs:element name="descriere" type="descriereType" />
+      <xs:element name="stoc" type="stocType" />
+      <xs:element name="caracteristici" type="caracteristiciType" />
+    </xs:sequence>
+    <xs:attribute name="idP" type="xs:string" default="idp" />
+    <xs:attribute name="valabilDela" type="xs:string" default="valdela" />
+    <xs:attribute name="valabilPanala" type="xs:string" default="valpanla" />
+    <xs:attribute name="garantie" type="xs:string" default="garantie" />
+  </xs:complexType>
+  <xs:element name="denumireP" type="denumirePType" />
+  <xs:complexType name="denumirePType">
+    <xs:simpleContent>
+      <xs:extension base="xs:string" />
+    </xs:simpleContent>
+  </xs:complexType>
+  <xs:element name="pret" type="pretType" />
+  <xs:complexType name="pretType">
+    <xs:simpleContent>
+      <xs:extension base="xs:string" />
+    </xs:simpleContent>
+  </xs:complexType>
+  <xs:element name="descriere" type="descriereType" />
+  <xs:complexType name="descriereType">
+    <xs:simpleContent>
+      <xs:extension base="xs:string" />
+    </xs:simpleContent>
+  </xs:complexType>
+  <xs:element name="stoc" type="stocType" />
+  <xs:complexType name="stocType">
+    <xs:simpleContent>
+      <xs:extension base="xs:string" />
+    </xs:simpleContent>
+  </xs:complexType>
+  <xs:element name="caracteristici" type="caracteristiciType" />
+  <xs:complexType name="caracteristiciType" mixed="true">
+    <xs:sequence>
+      <xs:any minOccurs="0" maxOccurs="unbounded" processContents="skip" />
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>

@@ -1,0 +1,20 @@
+domains
+    el=integer
+    list=el*
+    list2=list*
+predicates
+    stergere(list,integer,list)
+    apare(integer,list,integer)
+    perechi(list,list2)
+clauses
+    stergere([],_,[]).
+    stergere([E|T],E,T1):-!,stergere(T,E,T1).
+    stergere([H|T],E,[H|T1]):-stergere(T,E,T1).
+    apare(_,[],0):-!.
+    apare(H,[H|T],N1):-apare(H,T,N),N1=N+1,!.
+    apare(H,[_|T],N):-apare(H,T,N).
+    perechi([],[]):-!.
+    perechi([H|T],L2):-apare(H,[H|T],N1),
+                      stergere([H|T],H,L1),
+                      perechi(L1,L3),L2=[[H,N1]|L3],!.
+    perechi([T],[[T,1]]).                 

@@ -1,0 +1,90 @@
+<html>
+<head>
+<title>Problema 8, Laborator JavaScript</title>
+
+<script language="JavaScript">
+<!--
+   var tabel = new Array(new Array('Nume', 'Prenume', 'Nota'), new Array('Pop', 'Gigel', 7), new Array('Muresan', 'Ioan',
+3), new Array('Galea', 'Petruta', 6), new Array('Sterca', 'Adrian', 2) );
+
+
+   var bule = new Array(tabel[0].length);
+   for (var i = 0; i < bule.length; i++)
+     bule[i] = true;
+     
+
+
+   function ordoneaza(c) {
+     var i, j, k;
+     var aux;
+
+     for (i = 1; i < tabel.length - 1; i++)
+       for (j = i + 1; j < tabel.length; j++)
+           if ((tabel[i][c] > tabel[j][c]) == bule[c]) {
+           aux = tabel[i];
+           tabel[i] = tabel[j];
+           tabel[j] = aux;
+         }
+
+      bule[c] = ! bule[c];
+   }   
+   
+   function obtineTabel() {
+     var i, j;
+     var s;
+     s = '<table border="1">';
+     s = s + '<tr>';
+
+     for (j = 0; j < tabel[0].length; j++)
+       s = s + '<th><a href="JavaScript:afisare(' + j + ');">' + tabel[0][j] +'</a></th>';
+       s = s + '</tr>';
+    
+     for (i = 1; i < tabel.length; i++) {
+       s = s + '<tr>';
+       for (j = 0; j < tabel[i].length; j++)
+         s = s + '<td>' + tabel[i][j] + '</td>';
+       s = s + "</tr>";
+     }
+     s = s + '</table>';
+     return s;
+   }
+   
+   function afisare(c) {
+     var div;
+     ordoneaza(c);
+     div = document.getElementById('continut');
+     div.innerHTML = obtineTabel();
+   }
+
+-->
+</script>
+
+</head>
+
+<body>
+
+<script language="JavaScript">
+<!--
+  document.write( new Date() + "<br>");
+-->
+</script>
+
+<div id="continut">
+
+<script language="JavaScript">
+<!--
+  afisare(0);
+-->
+</script>
+
+</div>
+
+<script language="JavaScript">
+<!--
+  document.write( new Date() + "<br>");
+-->
+</script>
+
+</body>
+
+</html>

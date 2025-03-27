@@ -1,0 +1,20 @@
+C:\Documents and Settings\Administrator\My Documents\Visual Studio 2008\Projects\L1_GTBDD\L1_GTBDD\bin\Debug\L1_GTBDD.exe
+C:\Documents and Settings\Administrator\My Documents\Visual Studio 2008\Projects\L1_GTBDD\L1_GTBDD\bin\Debug\L1_GTBDD.pdb
+C:\Documents and Settings\Administrator\My Documents\Visual Studio 2008\Projects\L1_GTBDD\L1_GTBDD\obj\Debug\ResolveAssemblyReference.cache
+C:\Documents and Settings\Administrator\My Documents\Visual Studio 2008\Projects\L1_GTBDD\L1_GTBDD\obj\Debug\L1_GTBDD.Properties.Resources.resources
+C:\Documents and Settings\Administrator\My Documents\Visual Studio 2008\Projects\L1_GTBDD\L1_GTBDD\obj\Debug\L1_GTBDD.csproj.GenerateResource.Cache
+C:\Documents and Settings\Administrator\My Documents\Visual Studio 2008\Projects\L1_GTBDD\L1_GTBDD\obj\Debug\L1_GTBDD.exe
+C:\Documents and Settings\Administrator\My Documents\Visual Studio 2008\Projects\L1_GTBDD\L1_GTBDD\obj\Debug\L1_GTBDD.pdb
+C:\Documents and Settings\Administrator\My Documents\Visual Studio 2008\Projects\L1_GTBDD\L1_GTBDD\obj\Debug\L1_GTBDD.MainFrame.resources
+C:\Documents and Settings\Administrator\My Documents\Visual Studio 2008\Projects\L1_GTBDD\L1_GTBDD\obj\Debug\L1_GTBDD.AddColFrame.resources
+C:\Documents and Settings\Administrator\My Documents\Visual Studio 2008\Projects\L1_GTBDD\L1_GTBDD\obj\Debug\L1_GTBDD.AddTableFrame.resources
+E:\GTBDD\L1_GTBDD\L1_GTBDD\obj\Debug\L1_GTBDD.exe
+E:\GTBDD\L1_GTBDD\L1_GTBDD\obj\Debug\L1_GTBDD.pdb
+E:\GTBDD\L1_GTBDD\L1_GTBDD\obj\Debug\ResolveAssemblyReference.cache
+E:\GTBDD\L1_GTBDD\L1_GTBDD\obj\Debug\L1_GTBDD.MainFrame.resources
+E:\GTBDD\L1_GTBDD\L1_GTBDD\obj\Debug\L1_GTBDD.AddColFrame.resources
+E:\GTBDD\L1_GTBDD\L1_GTBDD\obj\Debug\L1_GTBDD.AddTableFrame.resources
+E:\GTBDD\L1_GTBDD\L1_GTBDD\obj\Debug\L1_GTBDD.Properties.Resources.resources
+E:\GTBDD\L1_GTBDD\L1_GTBDD\obj\Debug\L1_GTBDD.csproj.GenerateResource.Cache
+D:\Scoala\An 2\Sem II\GT-BDD\Laboratoare\L1_GTBDD\L1_GTBDD\obj\Debug\L1_GTBDD.exe
+D:\Scoala\An 2\Sem II\GT-BDD\Laboratoare\L1_GTBDD\L1_GTBDD\obj\Debug\L1_GTBDD.pdb

@@ -1,0 +1,25 @@
+domains
+         elem=integer
+         lista=elem*
+predicates
+          pow(elem,elem,elem)
+          length(lista,elem)
+          valoare(elem,lista,elem)
+clauses
+        pow(_,0,1):-!.
+        pow(X,1,X):-!.
+        pow(X,P,R):-
+                P1=P-1,
+                pow(X,P1,R1),
+                R=R1*X. 
+        length([],0):-!.
+        length([_|T],R):-
+                 length(T,R1),
+                 R=R1+1.
+       valoare(_,[],0):-!.
+       valoare(E,[H|T],R):-
+               valoare(E,T,R1),
+               length(T,P),
+               pow(E,P,V),
+               R=H*V+R1.
+     

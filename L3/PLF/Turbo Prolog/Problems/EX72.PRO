@@ -1,0 +1,27 @@
+%P4.1
+
+domains
+	el=integer
+	list=el*
+predicates
+	necons(list,list)
+clauses
+	necons([],[]):-!.
+	necons([H1,H2,H3|T],L):-
+		H2=H1+1,
+		H3=H2+1,
+		necons(T,L),
+		!.
+	necons([H,H1|T],L):-
+		H1=H+1,
+		necons(T,L),
+		!.
+	necons([H,H1|T],L1):-
+		necons([H1|T],L1),
+		L1=[H|L1],
+		!.
+	necons([H1,H2],[]):-
+		H2=H1+1,
+		necons([],[]),
+		!.
+	necons([H],[H]):-!.

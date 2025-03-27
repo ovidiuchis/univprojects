@@ -1,0 +1,34 @@
+/*    Definiti un predicat care obtine lista 
+   tuturor  nodurilor unui arbore dat.
+      Arborele se va parcurge in preordine.      */
+domains
+  elem=symbol
+  arbore=arb(elem,arbore,arbore);nil
+  list=elem*
+predicates
+  preordine(arbore,list)
+  conc(list,list,list)
+clauses
+  conc([],L,L).
+  conc([X|L1],L2,[X|L3]):-
+                          conc(L1,L2,L3). 
+  preordine(nil,[]).
+  preordine(arb(R,S,D),L):-preordine(D,L1),preordine(S,L2),conc(L2,[R],L3),conc(L3,L1,L).
+	
+/*preordine (arb(a,arb(b,arb(d,nil,nil),arb(e,nil,nil)),arb(c,nil,nil)),L),*/
+
+goal preordine(arb(f,
+ 		arb(b,
+ 			arb(a,nil,nil),
+ 			arb(d,
+ 				arb(c,nil,nil),
+ 				arb(e,nil,nil)
+ 			   ),
+             	arb(g,
+             		nil,
+             		arb(i,
+             			arb(h,nil,nil),
+             			nil
+             		    )
+                    )
+               ), L) ,write (L).

@@ -1,0 +1,42 @@
+
+
+<html>
+<head>
+
+<title>Exemplu de formular cu doua butoane de submit ce conduc la CGI-uri diferite</title>
+
+<script language="JavaScript">
+<!--
+   function trimiteMail() {
+
+     with (window.document.forms.login) {
+       if (email.value == '') {
+         alert("Introduceti cel putin adresa de e-mail ca sa avem unde sa va trimitem parola!");
+         return false;
+       }
+       action = "cgi-bin/mail.cgi";
+       submit();
+     }
+   }  
+-->
+</script>
+
+</head>
+
+<body>
+<form action="cgi-bin/verifica.cgi" method="GET" name="login">
+<table>
+  <tr><td>Adresa de e-mail:</td><td><input type="text" name="email"/></td></tr>
+  <tr><td>Parola:</td><td><input type="password" name="parola"/></td></tr>
+  
+  <tr><td colspan="2" height="10px"></tr>
+  <tr>
+     <td><input type="submit" value="Login"/></td>
+     <td><input type="button" value="Mi-am uitat parola" onClick="JavaScript:trimiteMail();"/></td>
+  </tr>
+</table>
+</form>
+
+</body>
+
+</html>

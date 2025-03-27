@@ -1,0 +1,23 @@
+<web-app>
+
+	<context-param>
+		<param-name>DataBaseURL</param-name>
+		<param-value>jdbc:mysql://172.30.0.4:3306/pw</param-value>
+	</context-param>
+	<context-param>
+		<param-name>DataBaseUser</param-name>
+		<param-value>pw</param-value>
+	</context-param>
+	<context-param>
+		<param-name>DataBasePassword</param-name>
+		<param-value>pw</param-value>
+	</context-param>
+	<context-param>
+		<param-name>Driver</param-name>
+		<param-value>com.mysql.jdbc.Driver</param-value>
+	</context-param>	
+
+  <listener>
+    <listener-class>ApplicationManagement</listener-class>
+  </listener>
+</web-app>

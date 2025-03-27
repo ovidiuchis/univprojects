@@ -1,0 +1,30 @@
+
+
+
+	denumireC
+	{
+	font-family:Verdana;
+	font-size:large;
+	color: black;
+	display:block;
+	background-color:#FFF1B4;
+	text-align:center;
+	}
+	
+	pret, descriere, stoc
+	{
+	font-family:Verdana;
+	display:block;
+	padding-left:30pt;
+
+	}
+	denumireP
+	{
+	font-family:Verdana;
+	font-weight:bold;
+	padding-left: 15pt;
+	}
+	produs
+	{font-family:Verdana;
+	display:block;
+	}

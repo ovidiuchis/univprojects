@@ -1,0 +1,28 @@
+﻿create procedure create_rez
+as
+begin
+  if exists (select name from sys.sysobjects where xtype='U' and name='Rezervari')
+     drop table Rezervari
+ 
+ create table Rezervari(
+  cursa varchar(30) primary key,
+  nr_locuri int,
+  nr_locuri_libere int
+  )
+
+insert into Rezervari
+select 'c1',100,80
+union all
+select 'c2',50,40
+union all
+select  'c3',80,30
+union all
+select 'c4', 150, 50
+union all
+select 'c5',60,50
+union all
+select 'c6',90,10
+union all
+select 'c7',20,5
+
+end
