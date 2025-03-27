@@ -6,9 +6,34 @@ Această arhivă conține materiale, proiecte și resurse acumulate în timpul a
 
 ### Anul 1
 
+- **AC** – Arhitectura Calculatoarelor: laboratoare în ASM și structuri hardware.
+- **BMC** – Bazele Matematicii pentru Calculatoare: logică, mulțimi, relații.
+- **FP** – Fundamentele Programării: programare de bază (C/C++).
+- **POO** – Programare Orientată pe Obiect: principii OOP în Java/C++.
+- **SD** – Structuri de Date: implementări și algoritmi fundamentali.
+- **SDA** – Sisteme Digitale și Arhitectură: componente hardware, circuite.
+- **SO** – Sisteme de Operare: procese, fire, semafoare, alocare memorie.
+
 ### Anul 2
 
+- **AG** – Algoritmica / Algoritmi avansati Avansați: tehnici de optimizare.
+- **CN** – Calcul Numeric: metode numerice, erori, interpolare.
+- **CTI – Web, Analytics**: dezvoltare web, tehnologii client-server.
+- **DS** – Design Software: principii de arhitectură software.
+- **LFTC** – Limbaje Formale și Tehnici de Compilare: automate, gramatici, parsere.
+- **PDPJ** – Proiectare și Dezvoltare Programe Java: aplicații Java avansate.
+- **PW** – Proiecte Web: HTML, CSS, JS, backend.
+- **VVSS** – Verificarea și Validarea Sistemelor Software: metode de testare.
+
 ### Anul 3
+
+- **APM** – Aplicații Practice în Medii Mobile: dezvoltare pentru Android/iOS.
+- **BD** – Baze de Date: modelare, SQL, tranzacții.
+- **GT-BDD** – Grafuri și Tehnici în BDD: algoritmi pe grafuri și baze de date deductive.
+- **IA** – Inteligență Artificială: algoritmi de învățare, raționament automat.
+- **PLF** – Paradigme de Limbaje Funcționale: Haskell, Lisp, recursie.
+- **RC** – Rețele de Calculatoare: modele OSI, protocoale, securitate.
+- **SOD** – Sisteme Operationale Distribuite: comunicare între procese, RPC, sincronizare.
 
 ## Master
 
@@ -30,7 +55,6 @@ Această arhivă conține materiale, proiecte și resurse acumulate în timpul a
 - **Modele Formale de Concurență și Comunicații** – Modelare teoretică a sistemelor concurente.
 - **CABD** – Concepte avansate de baze de date.
 
-
 ## Rulare și dependențe
 
 Proiectele au fost dezvoltate într-o varietate de limbaje și medii (Java, HTML, baze de date, etc.). Pentru rulare, ține cont de următoarele:
@@ -46,4 +70,3 @@ Proiectele au fost dezvoltate într-o varietate de limbaje și medii (Java, HTML
 ---
 
 > _Această arhivă este una personală și este păstrată pentru uz propriu, documentare și referință._
-
