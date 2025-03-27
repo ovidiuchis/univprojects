@@ -1,4 +1,4 @@
-# Arhivă personală de proiecte de licente si masterat
+# Arhivă personală de proiecte, cod și materiale din timpul studenției
 
 Această arhivă reunește proiecte, cod și materiale adunate pe parcursul studiilor la [Universitatea Babeș-Bolyai, Cluj-Napoca](https://www.cs.ubbcluj.ro/)
 
