@@ -1,3 +1,9 @@
+## ☕ Susține
+
+Dacă munca mea te încurajează sau îți este de ajutor, mă poți susține aici 👇
+
+[!["Buy Me A Coffee"](https://www.buymeacoffee.com/assets/img/custom_images/orange_img.png)](https://buymeacoffee.com/ochis)
+
 # Arhivă personală de proiecte, cod și materiale din timpul studenției
 
 Această arhivă reunește proiecte, cod și materiale adunate pe parcursul studiilor la [Universitatea Babeș-Bolyai, Cluj-Napoca](https://www.cs.ubbcluj.ro/)
